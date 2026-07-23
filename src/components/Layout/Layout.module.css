@@ -1,0 +1,22 @@
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* .page main {
+    flex: 1;
+    padding-top: 120px;
+  } */
+  
+  @media (max-width: 768px) {
+    /* .page main {
+      padding-top: 110px;
+    } */
+  }
+  
+  @media (max-width: 575px) {
+    /* .page main {
+      padding-top: 100px;
+    } */
+  }
