@@ -1,0 +1,76 @@
+.heroSection {
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    background: #000;
+    position: relative;
+ }
+ 
+ .heroBanImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+ }
+ 
+ .heroSectTxt {
+    font-size: 10vw;
+    line-height: 1.3;
+ }
+ 
+ @media (min-width:768px) {
+    .heroSectTxt {
+       font-size: 4vw;
+    }
+ }
+
+ .catgItemBox {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    position: relative;
+ }
+ 
+ .catgIcon {
+    width: 2.5rem;
+    aspect-ratio: 1;
+    fill: var(--primary);
+ }
+ 
+ .catgName {
+    font-size: clamp(0.88rem, calc(0.825rem + 0.250vw), 1.13rem);
+    font-weight: 600;
+ }
+ 
+ .catgItemBox:before {
+    content: '';
+    width: 0;
+    aspect-ratio: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(251, 214, 205, 1) 21%, rgba(255, 255, 255, 0) 65%);
+    transition: all .5s ease;
+    opacity: .5;
+    transform: rotate(0deg);
+ }
+ 
+ .catgItemBox:hover:before {
+    width: 100%;
+    opacity: 1;
+    transform: rotate(1080deg);
+ }
+ 
+ @media (min-width:576px) {
+    .catgIcon {
+       width: 3.5rem;
+    }
+ }
+ 

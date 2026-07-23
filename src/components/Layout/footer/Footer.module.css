@@ -1,0 +1,67 @@
+.pageFooter {
+    font-size: clamp(0.88rem, calc(0.850rem + 0.125vw), 1.00rem);
+ }
+ 
+ .pageFooter a:hover {
+    color: var(--pinkDark);
+    transition: all .3s ease;
+ }
+ 
+ .footLotus {
+    width: 120px;
+    aspect-ratio: 3/2;
+    display: block;
+    background: var(--lotusPink) no-repeat center / contain;
+ }
+ 
+ .footHead {
+    text-transform: uppercase;
+    font-size: clamp(0.88rem, calc(0.825rem + 0.250vw), 1.13rem);
+ }
+ 
+ .footLinks li:before {
+    content: '-';
+    margin-right: .5rem;
+    color: var(--pink);
+ }
+ 
+ .footLinks li a {
+    position: relative;
+    left: 0;
+    transition: all .5s ease;
+    display: inline-block;
+ }
+ 
+ .footLinks li:hover a {
+    left: 5px;
+ }
+ 
+ .footCopy {
+    border-top: 1px solid rgba(var(--pinkRGB), .2);
+    font-size: .9rem;
+ }
+ 
+ .socialIcons a {
+    width: 2rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--pink);
+    color: var(--primary);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+    padding: .4rem;
+ }
+ 
+ .socialIcons a svg {
+    width: 100%;
+    height: 100%;
+ }
+ 
+ .socialIcons a:hover {
+    background: var(--pinkDark);
+    color: var(--primary);
+    transform: scale(1.1);
+ }
+ 
