@@ -38,8 +38,8 @@ const Celebrate = () => {
           </div>
         </div>
         <div className={`${styles.stoneBox} py-5 py-lg-0`}>
-          <Image src={goldStone} className={`${styles.goldStone_1}`} />
-          <div className={`${styles.aboutYear} titleFont`}>Since 1999</div>
+          <Image src={goldStone} className={`${styles.goldStone_1} goldStone_1`} />
+          <div className={`${styles.aboutYear} aboutYear titleFont`}>Since 1999</div>
         </div>
       </section>
 

@@ -4,6 +4,7 @@ import Layout from '../Layout/Layout'
 import SignatureCollection from './signature-collection/SignatureCollection'
 import Celebrate from './celebrates/Celebrate'
 import Manufacturing from './manufacturing/Manufacturing'
+import Testimonial from './testimonial/Testimonial'
 
 const HomeComponent = () => {
   return (
@@ -12,6 +13,7 @@ const HomeComponent = () => {
       <SignatureCollection />
       <Celebrate />
       <Manufacturing />
+      <Testimonial />
     </Layout>
   )
 }

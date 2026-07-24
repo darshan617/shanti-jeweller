@@ -1,0 +1,62 @@
+.handBg {
+    height: 96%;
+    aspect-ratio: 24/31;
+    opacity: .3;
+ }
+ 
+ .testimonialSwiper {
+    max-width: 1000px;
+    overflow: visible;
+ }
+ 
+ .testimonialSwiper .swiper-slide {
+    height: auto;
+ }
+ 
+ .testimonialSwiper :global(.swiper-slide) .testimBox {
+    opacity: 0.2;
+    transition: all 1s ease;
+  }
+ 
+  .testimonialSwiper :global(.swiper-slide-active) .testimBox {
+    opacity: 1;
+  }
+ 
+ .testimBox {
+    max-width: 80%;
+    margin: auto;
+ }
+ 
+ .testimBox:before {
+    content: '';
+    width: 40px;
+    aspect-ratio: 6/5;
+    display: block;
+    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 25' fill='%236d2a46'><path d='M7.4,25c-1.4,0-2.6-0.3-3.5-0.9c-0.9-0.6-1.6-1.4-2.2-2.3c-0.6-1.1-1.1-2.3-1.3-3.5c-0.2-1.2-0.3-2.2-0.3-3C0,12,0.8,9.1,2.4,6.4C4,3.8,6.6,1.7,9.8,0C9.9,0,10,0,10,0.1l0.7,1.5c0,0.1,0,0.2-0.1,0.2c-1.9,0.9-3.6,2.2-5,4c-1.5,1.9-2.2,3.7-2.2,5.7c0,0.7,0.1,1.3,0.2,1.9c0,0.1,0.2,0.1,0.3,0.1c1-0.8,2.1-1.2,3.4-1.2c1.7,0,3.1,0.6,4.4,1.7c1.2,1.1,1.8,2.7,1.8,4.7c0,1.9-0.6,3.4-1.8,4.6C10.5,24.4,9,25,7.4,25z M23.8,25c-1.4,0-2.6-0.3-3.5-0.9c-0.9-0.6-1.6-1.4-2.2-2.3c-0.6-1.1-1.1-2.3-1.3-3.5c-0.2-1.2-0.3-2.2-0.3-3c0-3.2,0.8-6.2,2.4-8.8c1.6-2.6,4.1-4.7,7.4-6.4c0.1,0,0.2,0,0.2,0.1l0.7,1.5c0,0.1,0,0.2-0.1,0.2c-1.9,0.9-3.6,2.2-5,4c-1.5,1.9-2.2,3.7-2.2,5.7c0,0.7,0.1,1.3,0.2,1.9c0,0.1,0.2,0.1,0.2,0.1c1-0.8,2.1-1.1,3.4-1.1c1.7,0,3.1,0.6,4.4,1.7c1.2,1.1,1.8,2.7,1.8,4.7c0,1.9-0.6,3.4-1.8,4.6C26.9,24.4,25.5,25,23.8,25z'/></svg>") no-repeat center / contain;
+ }
+ 
+ .ttmText {
+    font-size: clamp(1.13rem, calc(0.852rem + 1.364vw), 1.88rem);
+    font-weight: 600;
+    line-height: 1.5;
+ }
+ 
+ .ttmAuthor {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+ }
+ 
+ .ttmAuthor:before {
+    content: '- ';
+ }
+
+ .swiperNavBtn {
+    color: var(--primary);
+    width: 2rem;
+    opacity: .5;
+ }
+ 
+ .swiperNavBtn:hover {
+    opacity: 1;
+ }
