@@ -63,7 +63,7 @@ const Manufacturing = () => {
               <Image
                 src={goldStone2}
                 alt=""
-                className="w-100 goldStone_2"
+                className="w-100 goldStone_2 h-auto"
               />
             </div>
             <div className="col-lg col-md-6 order-lg-1">

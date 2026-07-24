@@ -134,7 +134,7 @@ const Banner = () => {
         <Image src={banner} alt="" class={`${styles.heroBanImg}`} />
         <div className="container-fluid h-100 d-flex align-items-center position-relative z-1 sitePadding">
           <div className="col-lg-5 col-md-4 text-white">
-            <h1 className={`${styles.heroSectTxt} titleFont`}>
+            <h1 className={`${styles.heroSectTxt} heroSectTxt titleFont`}>
               Timeless Gold. Crafted to Be Treasured Forever.
             </h1>
           </div>

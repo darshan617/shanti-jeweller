@@ -95,6 +95,10 @@
  .valueHead {
     font-size: clamp(1.25rem, calc(0.977rem + 1.364vw), 2.00rem);
  }
+
+ .goldStone_2{
+    height: auto;
+ }
  
  @media (min-width:992px) {
     .valueItem {
@@ -105,6 +109,7 @@
        transform: scale(1.05);
        transition-delay: 0;
     }
+    
  }
 
  .pTag{

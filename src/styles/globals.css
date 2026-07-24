@@ -213,78 +213,78 @@ p {
   transform-origin: 50% 50%;
   transition: all 0.5s ease-out;
 }
-/* .slideLeft {
+.slideLeft {
   opacity: 0;
   transform: translate3d(50px, 0px, 0px);
-} */
-/* .slideLeft.in-view {
+}
+.slideLeft.in-view {
   opacity: 1;
   transform: translate3d(0px, 0px, 0px);
-} */
-/* .slideRight {
+}
+.slideRight {
   opacity: 0;
   transform: translate3d(-50px, 0px, 0px);
-} */
-/* .slideRight.in-view {
+}
+.slideRight.in-view {
   opacity: 1;
   transform: translate3d(0px, 0px, 0px);
-} */
-/* .slideTop {
+}
+.slideTop {
   opacity: 0;
   transform: translate3d(0px, 50px, 0px);
-} */
-/* .slideTop.in-view {
+}
+.slideTop.in-view {
   opacity: 1;
   transform: translate3d(0px, 0px, 0px);
-} */
-/* .slideBottom {
+}
+.slideBottom {
   opacity: 0;
   transform: translate3d(0px, -80px, 0px);
-} */
-/* .slideBottom.in-view {
+}
+.slideBottom.in-view {
   opacity: 1;
   transform: translate3d(0px, 0px, 0px);
-} */
-/* .fadeGrow {
+}
+.fadeGrow {
   opacity: 0;
   transform: scale(0.8);
-} */
-/* .fadeGrow.in-view {
+}
+.fadeGrow.in-view {
   opacity: 1;
   transform: scale(1);
-} */
-/* .fadeShrink {
+}
+.fadeShrink {
   opacity: 0;
   transform: scale(1.2);
-} */
-/* .fadeShrink.in-view {
+}
+.fadeShrink.in-view {
   opacity: 1;
   transform: scale(1);
-} */
-/* .fadeIn {
+}
+.fadeIn {
   opacity: 0;
-} */
-/* .fadeIn.in-view {
+}
+.fadeIn.in-view {
   opacity: 1;
-} */
-/* .curtain {
+}
+.curtain {
   clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
-} */
-/* .curtain.in-view {
+}
+.curtain.in-view {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-} */
-/* .curtainLeft {
+}
+.curtainLeft {
   clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-} */
-/* .curtainLeft.in-view {
+}
+.curtainLeft.in-view {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-} */
-/* .flipX {
+}
+.flipX {
   transform: rotateY(360deg);
-} */
-/* .flipX.in-view {
+}
+.flipX.in-view {
   transform: rotateY(0deg);
-} */
+}
 @font-face {
   font-family: "Stardom";
   src: url("../../public/fonts/Stardom-Regular.otf") format("opentype");
