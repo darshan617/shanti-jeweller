@@ -6,6 +6,7 @@ import styles from "@/components/Layout/navbar/Navbar.module.css";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [menuShow, setMenuShow] = useState(false);
   const [stick, setStick] = useState(false);
 
   useEffect(() => {
@@ -14,6 +15,18 @@ export default function Header() {
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (!menuOpen) {
+      setMenuShow(false);
+      return;
+    }
+
+    const id = requestAnimationFrame(() => {
+      requestAnimationFrame(() => setMenuShow(true));
+    });
+    return () => cancelAnimationFrame(id);
+  }, [menuOpen]);
 
   return (
     <header
@@ -53,24 +66,21 @@ export default function Header() {
         </div>
 
         <div
-          className={`collapse ${menuOpen ? "show" : ""}`}
+          className={`${styles.menuPanel} ${menuOpen ? styles.menuPanelOpen : ""} ${menuShow ? "show" : ""}`}
           id="menu"
         >
           <ul className={`${styles.naviWrap} d-flex flex-column py-5`}>
             <li>
-              <Link href="/">Home</Link>
+              <a href="/">Home</a>
             </li>
             <li>
-              <Link href="/about_us">About Us</Link>
+              <a href="/about_us">About Us</a>
             </li>
             <li>
-              <Link href="">Collections</Link>
+              <a href="/collections">Collections</a>
             </li>
             <li>
-              <Link href="">Gallery</Link>
-            </li>
-            <li>
-              <Link href="">Contact Us</Link>
+              <a href="/contact-us">Contact Us</a>
             </li>
           </ul>
         </div>
