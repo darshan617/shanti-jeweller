@@ -18,7 +18,7 @@ const SignatureCollection = () => {
               <h2 className="titleFont sectTitle textPrimary mb-4 titleAnim">
                 Our Signature Collections
               </h2>
-              <p className={`${styles.titleAnim}`}>
+              <p className={`${styles.titleAnim} titleAnim`}>
                 Explore four distinctive jewellery collections, each crafted to
                 celebrate timeless elegance, exceptional craftsmanship, and
                 every unique style.

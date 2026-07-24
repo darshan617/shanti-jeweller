@@ -31,15 +31,15 @@ const Celebrate = () => {
               </h3>
             </div>
             <div className="col-12">
-              <Link href="about_us.html" className="ctaBtn">
+              <Link href="/about_us" className="ctaBtn">
                 Explore More
               </Link>
             </div>
           </div>
         </div>
         <div className={`${styles.stoneBox} py-5 py-lg-0`}>
-          <Image src={goldStone} className={`${styles.goldStone_1}`} />
-          <div className={`${styles.aboutYear} titleFont`}>Since 1999</div>
+          <Image src={goldStone} className={`${styles.goldStone_1} goldStone_1`} />
+          <div className={`${styles.aboutYear} aboutYear titleFont`}>Since 1999</div>
         </div>
       </section>
 
@@ -63,7 +63,7 @@ const Celebrate = () => {
                     <p className={`${styles.pTag}`}>
                       Browse collections and designers
                     </p>
-                    <Link href="" className="ctaBtn ghost">
+                    <Link href="/collections" className="ctaBtn ghost">
                       Explore More
                     </Link>
                   </div>
@@ -83,7 +83,7 @@ const Celebrate = () => {
                     <p className={`${styles.pTag}`}>
                       Browse collections and designers
                     </p>
-                    <Link href="" className="ctaBtn ghost">
+                    <Link href="/collections" className="ctaBtn ghost">
                       Explore More
                     </Link>
                   </div>
@@ -107,7 +107,7 @@ const Celebrate = () => {
                     <p className={`${styles.pTag}`}>
                       Browse collections and designers
                     </p>
-                    <Link href="" className="ctaBtn ghost">
+                    <Link href="/collections" className="ctaBtn ghost">
                       Explore More
                     </Link>
                   </div>
@@ -129,7 +129,7 @@ const Celebrate = () => {
                     <p className={`${styles.pTag}`}>
                       Browse collections and designers
                     </p>
-                    <Link href="" className="ctaBtn ghost">
+                    <Link href="/collections" className="ctaBtn ghost">
                       Explore More
                     </Link>
                   </div>
