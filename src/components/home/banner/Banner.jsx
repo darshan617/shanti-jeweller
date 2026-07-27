@@ -4,8 +4,6 @@ import React from "react";
 import styles from "@/components/home/banner/Banner.module.css";
 
 const Banner = () => {
-
-  
   const categories = [
     { name: "Bracelets", delay: "0s" },
     { name: "Rings", delay: ".2s" },
@@ -131,11 +129,29 @@ const Banner = () => {
   return (
     <>
       <section className={`${styles.heroSection} `}>
-        <Image src={banner} alt="" class={`${styles.heroBanImg}`} />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className={`${styles.heroBanImg}`}
+        >
+          <source
+            src="/videos/hero_mob.mp4"
+            media="(max-width: 991.98px)"
+            type="video/mp4"
+          />
+          <source
+            src="/videos/manufactuing.mp4"
+            media="(min-width: 992px)"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
         <div className="container-fluid h-100 d-flex align-items-center position-relative z-1 sitePadding">
-          <div className="col-lg-5 col-md-4 text-white">
+          <div className="col-lg-6 col-md-4 text-white">
             <h1 className={`${styles.heroSectTxt} heroSectTxt titleFont`}>
-              Timeless Gold. Crafted to Be Treasured Forever.
+              Where intricate craftsmanship meets <br /> everyday luxury.
             </h1>
           </div>
         </div>
@@ -150,10 +166,7 @@ const Banner = () => {
                 className="col-lg-auto col-sm-4 col-4 animateThis slideTop"
                 style={{ transitionDelay: cat.delay }}
               >
-                <a
-                  href=""
-                  className={`${styles.catgItemBox} vstack gap-3`}
-                >
+                <a href="" className={`${styles.catgItemBox} vstack gap-3`}>
                   <div>{icons[cat.name]}</div>
                   <span className={`${styles.catgName}`}>{cat.name}</span>
                 </a>

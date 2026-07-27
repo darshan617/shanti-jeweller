@@ -38,7 +38,7 @@ const ContactUs = () => {
 
       map = L.map(mapRef.current).setView(
         [19.118959851795875, 72.85936016138986],
-        12
+        12,
       );
 
       L.tileLayer(
@@ -46,7 +46,7 @@ const ContactUs = () => {
         {
           maxZoom: 19,
           attribution: "&copy; OpenStreetMap",
-        }
+        },
       ).addTo(map);
 
       const myIcon = L.icon({
@@ -58,7 +58,7 @@ const ContactUs = () => {
       L.marker([19.118959851795875, 72.85936016138986], { icon: myIcon })
         .addTo(map)
         .bindPopup(
-          '<span class="d-block text-center" style="font-size:10px">We are here</span><strong>Shanti Jewellers</strong> <a href="https://www.google.com/maps/dir/Current+Location/Shanti+Jewellers+Pvt+Limited,+Unit+No-+71,+Apollo+Industrial+Estate,+Off+Mahakali+Caves+Rd,+Andheri+(E,+Mumbai,+Maharashtra+400093/@19.1460563,72.8283077,8592m/data=!3m2!1e3!4b1!4m18!1m8!3m7!1s0x3be7c83100bff59b:0x15f51dfd1d289cee!2sShanti+Jewellers+Pvt+Limited!8m2!3d19.1149315!4d72.8601278!15sCgxzd2FybiBzaGFudGmSARRqZXdlbHJ5X21hbnVmYWN0dXJlcuABAA!16s%2Fg%2F11fnpb6ybc!4m8!1m1!4e1!1m5!1m1!1s0x3be7c83100bff59b:0x15f51dfd1d289cee!2m2!1d72.8601278!2d19.1149315?entry=ttu&g_ep=EgoyMDI2MDcxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="d-block text-center mt-1" style="font-size:11px;color:#6d2a46">Get Directions</a>'
+          '<span className="d-block text-center" style="font-size:10px">We are here</span><strong>Shanti Jewellers</strong> <a href="https://www.google.com/maps/dir/Current+Location/Shanti+Jewellers+Pvt+Limited,+Unit+No-+71,+Apollo+Industrial+Estate,+Off+Mahakali+Caves+Rd,+Andheri+(E,+Mumbai,+Maharashtra+400093/@19.1460563,72.8283077,8592m/data=!3m2!1e3!4b1!4m18!1m8!3m7!1s0x3be7c83100bff59b:0x15f51dfd1d289cee!2sShanti+Jewellers+Pvt+Limited!8m2!3d19.1149315!4d72.8601278!15sCgxzd2FybiBzaGFudGmSARRqZXdlbHJ5X21hbnVmYWN0dXJlcuABAA!16s%2Fg%2F11fnpb6ybc!4m8!1m1!4e1!1m5!1m1!1s0x3be7c83100bff59b:0x15f51dfd1d289cee!2m2!1d72.8601278!2d19.1149315?entry=ttu&g_ep=EgoyMDI2MDcxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="d-block text-center mt-1" style="font-size:11px;color:#6d2a46">Get Directions</a>',
         );
 
       invalidateTimer = setTimeout(() => {
@@ -124,7 +124,9 @@ const ContactUs = () => {
                     >
                       Address
                     </small>
-                    <strong className={`${styles.strongTag} titleFont textPrimary`}>
+                    <strong
+                      className={`${styles.strongTag} titleFont textPrimary`}
+                    >
                       Shanti Jewellers
                     </strong>
                     <p className={`${styles.pTag}`}>

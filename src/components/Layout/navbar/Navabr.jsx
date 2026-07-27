@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import logo from "@/assets/images/logo.png";
 import styles from "@/components/Layout/navbar/Navbar.module.css";
 
 export default function Header() {
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuShow, setMenuShow] = useState(false);
   const [stick, setStick] = useState(false);
@@ -36,8 +37,8 @@ export default function Header() {
     >
       <div className={`${styles.pgHeadMain} container-fluid rounded`}>
         <div className="row justify-content-between align-items-center">
-          <div className="col-auto" >
-            <Link href="/" className={`${styles.logoBox} `}>
+          <div className="col-auto">
+            <a onClick={() => router.push("/")} className={`${styles.logoBox} `}>
               <Image
                 src={logo}
                 alt="Shanti Jewellers"
@@ -45,7 +46,7 @@ export default function Header() {
                 className={`${styles.logoImg}`}
                 fill
               />
-            </Link>
+            </a>
           </div>
           <div className="col-auto">
             <div className="hstack gap-4">
@@ -71,16 +72,16 @@ export default function Header() {
         >
           <ul className={`${styles.naviWrap} d-flex flex-column py-5`}>
             <li>
-              <a href="/">Home</a>
+              <a onClick={() => router.push("/")}>Home</a>
             </li>
             <li>
-              <a href="/about_us">About Us</a>
+              <a onClick={() => router.push("/about_us")}>About Us</a>
             </li>
             <li>
-              <a href="/collections">Collections</a>
+              <a onClick={() => router.push("/collections")}>Collections</a>
             </li>
             <li>
-              <a href="/contact-us">Contact Us</a>
+              <a onClick={() => router.push("/contact-us")}>Contact Us</a>
             </li>
           </ul>
         </div>
