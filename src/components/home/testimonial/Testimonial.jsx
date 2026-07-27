@@ -43,7 +43,7 @@ const Testimonial = () => {
     <section className="bgPink py-5 position-relative testimSection overflow-hidden">
       <Image
         src={handBg}
-        alt=""
+        alt="handBag"
         className={`${styles.handBg} position-absolute end-0 bottom-0 z-0`}
       />
 
@@ -61,160 +61,160 @@ const Testimonial = () => {
           ref={swiperElRef}
           className={`${styles.testimonialSwiper} testimonialSwiper swiper w-100 my-lg-5 animateThis fadeIn`}
         >
-            <div className="swiper-wrapper">
-                <div className="swiper-slide">
+          <div className="swiper-wrapper">
+            <div className="swiper-slide">
+              <div
+                className={`${styles.testimBox} d-flex flex-column align-items-center gap-5 text-center`}
+              >
+                <div className={`${styles.ttmText}`}>
+                  The craftsmanship is simply outstanding. Every detail reflects
+                  elegance, and my bridal necklace was even more beautiful than
+                  I imagined.
+                </div>
                 <div
-                    className={`${styles.testimBox} d-flex flex-column align-items-center gap-5 text-center`}
+                  className={`${styles.ttmAuthor} text-uppercase textPrimary`}
                 >
-                    <div className={`${styles.ttmText}`}>
-                    The craftsmanship is simply outstanding. Every detail reflects
-                    elegance, and my bridal necklace was even more beautiful than
-                    I imagined.
-                    </div>
-                    <div
-                    className={`${styles.ttmAuthor} text-uppercase textPrimary`}
-                    >
-                    Priya Sharma
-                    </div>
+                  Priya Sharma
                 </div>
-                </div>
-
-                <div className="swiper-slide">
-                <div
-                    className={`${styles.testimBox} d-flex flex-column align-items-center gap-5 text-center`}
-                >
-                    <div className={`${styles.ttmText}`}>
-                    The craftsmanship is simply outstanding. Every detail reflects
-                    elegance, and my bridal necklace was even more beautiful than
-                    I imagined.
-                    </div>
-                    <div
-                    className={`${styles.ttmAuthor} text-uppercase textPrimary`}
-                    >
-                    Priya Sharma
-                    </div>
-                </div>
-                </div>
-
-                <div className="swiper-slide">
-                <div
-                    className={`${styles.testimBox} d-flex flex-column align-items-center gap-5 text-center`}
-                >
-                    <div className={`${styles.ttmText}`}>
-                    The craftsmanship is simply outstanding. Every detail reflects
-                    elegance, and my bridal necklace was even more beautiful than
-                    I imagined.
-                    </div>
-                    <div
-                    className={`${styles.ttmAuthor} text-uppercase textPrimary`}
-                    >
-                    Priya Sharma
-                    </div>
-                </div>
-                </div>
-
-                <div className="swiper-slide">
-                <div
-                    className={`${styles.testimBox} d-flex flex-column align-items-center gap-5 text-center`}
-                >
-                    <div className={`${styles.ttmText}`}>
-                    The craftsmanship is simply outstanding. Every detail reflects
-                    elegance, and my bridal necklace was even more beautiful than
-                    I imagined.
-                    </div>
-                    <div
-                    className={`${styles.ttmAuthor} text-uppercase textPrimary`}
-                    >
-                    Priya Sharma
-                    </div>
-                </div>
-                </div>
-
-                <div className="swiper-slide">
-                <div
-                    className={`${styles.testimBox} d-flex flex-column align-items-center gap-5 text-center`}
-                >
-                    <div className={`${styles.ttmText}`}>
-                    The craftsmanship is simply outstanding. Every detail reflects
-                    elegance, and my bridal necklace was even more beautiful than
-                    I imagined.
-                    </div>
-                    <div
-                    className={`${styles.ttmAuthor} text-uppercase textPrimary`}
-                    >
-                    Priya Sharma
-                    </div>
-                </div>
-                </div>
-
-                <div className="swiper-slide">
-                <div
-                    className={`${styles.testimBox} d-flex flex-column align-items-center gap-5 text-center`}
-                >
-                    <div className={`${styles.ttmText}`}>
-                    The craftsmanship is simply outstanding. Every detail reflects
-                    elegance, and my bridal necklace was even more beautiful than
-                    I imagined.
-                    </div>
-                    <div
-                    className={`${styles.ttmAuthor} text-uppercase textPrimary`}
-                    >
-                    Priya Sharma
-                    </div>
-                </div>
-                </div>
-
-                <div className="swiper-slide">
-                <div
-                    className={`${styles.testimBox} d-flex flex-column align-items-center gap-5 text-center`}
-                >
-                    <div className={`${styles.ttmText}`}>
-                    The craftsmanship is simply outstanding. Every detail reflects
-                    elegance, and my bridal necklace was even more beautiful than
-                    I imagined.
-                    </div>
-                    <div
-                    className={`${styles.ttmAuthor} text-uppercase textPrimary`}
-                    >
-                    Priya Sharma
-                    </div>
-                </div>
-                </div>
-
-                <div className="swiper-slide">
-                <div
-                    className={`${styles.testimBox} d-flex flex-column align-items-center gap-5 text-center`}
-                >
-                    <div className={`${styles.ttmText}`}>
-                    The craftsmanship is simply outstanding. Every detail reflects
-                    elegance, and my bridal necklace was even more beautiful than
-                    I imagined.
-                    </div>
-                    <div
-                    className={`${styles.ttmAuthor} text-uppercase textPrimary`}
-                    >
-                    Priya Sharma
-                    </div>
-                </div>
-                </div>
-
-                <div className="swiper-slide">
-                <div
-                    className={`${styles.testimBox} d-flex flex-column align-items-center gap-5 text-center`}
-                >
-                    <div className={`${styles.ttmText}`}>
-                    The craftsmanship is simply outstanding. Every detail reflects
-                    elegance, and my bridal necklace was even more beautiful than
-                    I imagined.
-                    </div>
-                    <div
-                    className={`${styles.ttmAuthor} text-uppercase textPrimary`}
-                    >
-                    Priya Sharma
-                    </div>
-                </div>
-                </div>
+              </div>
             </div>
+
+            <div className="swiper-slide">
+              <div
+                className={`${styles.testimBox} d-flex flex-column align-items-center gap-5 text-center`}
+              >
+                <div className={`${styles.ttmText}`}>
+                  The craftsmanship is simply outstanding. Every detail reflects
+                  elegance, and my bridal necklace was even more beautiful than
+                  I imagined.
+                </div>
+                <div
+                  className={`${styles.ttmAuthor} text-uppercase textPrimary`}
+                >
+                  Priya Sharma
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide">
+              <div
+                className={`${styles.testimBox} d-flex flex-column align-items-center gap-5 text-center`}
+              >
+                <div className={`${styles.ttmText}`}>
+                  The craftsmanship is simply outstanding. Every detail reflects
+                  elegance, and my bridal necklace was even more beautiful than
+                  I imagined.
+                </div>
+                <div
+                  className={`${styles.ttmAuthor} text-uppercase textPrimary`}
+                >
+                  Priya Sharma
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide">
+              <div
+                className={`${styles.testimBox} d-flex flex-column align-items-center gap-5 text-center`}
+              >
+                <div className={`${styles.ttmText}`}>
+                  The craftsmanship is simply outstanding. Every detail reflects
+                  elegance, and my bridal necklace was even more beautiful than
+                  I imagined.
+                </div>
+                <div
+                  className={`${styles.ttmAuthor} text-uppercase textPrimary`}
+                >
+                  Priya Sharma
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide">
+              <div
+                className={`${styles.testimBox} d-flex flex-column align-items-center gap-5 text-center`}
+              >
+                <div className={`${styles.ttmText}`}>
+                  The craftsmanship is simply outstanding. Every detail reflects
+                  elegance, and my bridal necklace was even more beautiful than
+                  I imagined.
+                </div>
+                <div
+                  className={`${styles.ttmAuthor} text-uppercase textPrimary`}
+                >
+                  Priya Sharma
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide">
+              <div
+                className={`${styles.testimBox} d-flex flex-column align-items-center gap-5 text-center`}
+              >
+                <div className={`${styles.ttmText}`}>
+                  The craftsmanship is simply outstanding. Every detail reflects
+                  elegance, and my bridal necklace was even more beautiful than
+                  I imagined.
+                </div>
+                <div
+                  className={`${styles.ttmAuthor} text-uppercase textPrimary`}
+                >
+                  Priya Sharma
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide">
+              <div
+                className={`${styles.testimBox} d-flex flex-column align-items-center gap-5 text-center`}
+              >
+                <div className={`${styles.ttmText}`}>
+                  The craftsmanship is simply outstanding. Every detail reflects
+                  elegance, and my bridal necklace was even more beautiful than
+                  I imagined.
+                </div>
+                <div
+                  className={`${styles.ttmAuthor} text-uppercase textPrimary`}
+                >
+                  Priya Sharma
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide">
+              <div
+                className={`${styles.testimBox} d-flex flex-column align-items-center gap-5 text-center`}
+              >
+                <div className={`${styles.ttmText}`}>
+                  The craftsmanship is simply outstanding. Every detail reflects
+                  elegance, and my bridal necklace was even more beautiful than
+                  I imagined.
+                </div>
+                <div
+                  className={`${styles.ttmAuthor} text-uppercase textPrimary`}
+                >
+                  Priya Sharma
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide">
+              <div
+                className={`${styles.testimBox} d-flex flex-column align-items-center gap-5 text-center`}
+              >
+                <div className={`${styles.ttmText}`}>
+                  The craftsmanship is simply outstanding. Every detail reflects
+                  elegance, and my bridal necklace was even more beautiful than
+                  I imagined.
+                </div>
+                <div
+                  className={`${styles.ttmAuthor} text-uppercase textPrimary`}
+                >
+                  Priya Sharma
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div
             ref={prevRef}

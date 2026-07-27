@@ -29,14 +29,14 @@ const SignatureCollection = () => {
           <div className="row g-4 mb-5">
             <div className="col-md col-sm-6 order-md-1 animateThis fadeShrink">
               <div className={`${styles.collnBox}`}>
-                <Link href="" className="">
+                <Link href="#" >
                   <Image src={swaarNim} alt="swaarnim-gold" />
                 </Link>
               </div>
             </div>
             <div className="col-md col-sm-6 order-md-3 animateThis fadeShrink">
               <div className={`${styles.collnBox}`}>
-                <Link href="" className="">
+                <Link href="#" >
                   <Image src={collnSvara} alt="collnSvara" />
                 </Link>
               </div>
@@ -44,14 +44,14 @@ const SignatureCollection = () => {
             <div className="col-md col-sm-12 d-flex flex-md-column flex-sm-row flex-column gap-4 order-md-2">
               <div className="col animateThis fadeShrink">
                 <div className={`${styles.collnBox}`}>
-                  <Link href="" className="">
+                  <Link href="#" >
                     <Image src={collnRaahat} alt="collnRaahat" />
                   </Link>
                 </div>
               </div>
               <div className="col animateThis fadeShrink">
                 <div className={`${styles.collnBox}`}>
-                  <a href="" className="">
+                  <a href="#">
                     <Image src={collnKarat5} alt="collnKarat5" />
                   </a>
                 </div>

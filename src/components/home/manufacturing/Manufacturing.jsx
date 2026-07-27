@@ -62,7 +62,7 @@ const Manufacturing = () => {
               <div className={`${styles.valueTxt} titleFont textPink`}>Values</div>
               <Image
                 src={goldStone2}
-                alt=""
+                alt="goldStone"
                 className="w-100 goldStone_2 h-auto"
               />
             </div>

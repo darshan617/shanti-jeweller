@@ -115,12 +115,10 @@ const Collections = () => {
         <div className="container-fluid pb-5">
           <div className="d-flex flex-wrap justify-content-center gap-5 position-relative z-1 mb-5">
             <div className="col-12 text-center">
-              <div
-                className={`${styles.pageTitle} bg-white rounded-circle text-center ratio ratio-1x1 mx-auto shadow-lg`}
-              >
+              <div className={`${styles.pageTitle} bg-white rounded-circle text-center ratio ratio-1x1 mx-auto shadow-lg`}>
                 <div className="h-100 d-flex flex-column align-items-center justify-content-center">
-                  <div className="titleLotus mb-3 animateThis " />
-                  <h2 className="sectSubTitle text-uppercase animateThis ">
+                  <div className="titleLotus mb-3 animateThis"/>
+                  <h2 className="sectSubTitle text-uppercase animateThis">
                     Collections
                   </h2>
                 </div>
@@ -142,7 +140,7 @@ const Collections = () => {
                     className="col-md-5 col-6 animateThis slideTop"
                   >
                     <a href={image.src}>
-                      <img src={image.src} alt="" />
+                      <img src={image.src} alt="collection-image" />
                     </a>
                   </div>
                 ))}

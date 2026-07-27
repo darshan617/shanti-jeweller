@@ -1,16 +1,23 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/styles/globals.css";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
+
   useEffect(() => {
     initAos();
-    const cleanup = initSiteAnimations();
-    return cleanup;
   }, []);
+
+  useEffect(() => {
+    const cleanup = initSiteAnimations();
+    import("aos").then((mod) => mod.default.refresh());
+    return cleanup;
+  }, [router.asPath]);
 
   return <Component {...pageProps} />;
 }

@@ -54,7 +54,7 @@ const Celebrate = () => {
                   <Image
                     src={jewellryDiamond}
                     className={`${styles.jwImg} animateThis curtainLeft`}
-                    alt=""
+                    alt="jewellry-diamond"
                   />
                   <div className={`${styles.jwTxt} animateThis slideRight`}>
                     <h2 className={`${styles.jwHead} titleFont`}>
@@ -76,7 +76,7 @@ const Celebrate = () => {
                   <Image
                     src={jewellryCZ}
                     className={`${styles.jwImg} animateThis curtainLeft`}
-                    alt=""
+                    alt="jewellry-CZ"
                   />
                   <div className={`${styles.jwTxt} animateThis slideRight`}>
                     <h2 className={`${styles.jwHead} titleFont`}>CZ Jewelry</h2>
@@ -98,7 +98,7 @@ const Celebrate = () => {
                   <Image
                     src={jewellryGold}
                     className={`${styles.jwImg} animateThis curtainLeft`}
-                    alt=""
+                    alt="jewellry-gold"
                   />
                   <div className={`${styles.jwTxt} animateThis slideRight`}>
                     <h2 className={`${styles.jwHead} titleFont`}>
@@ -120,7 +120,7 @@ const Celebrate = () => {
                   <Image
                     src={jewellry}
                     className={`${styles.jwImg} animateThis curtainLeft`}
-                    alt=""
+                    alt="jewellry-kids"
                   />
                   <div className={`${styles.jwTxt} animateThis slideRight`}>
                     <h2 className={`${styles.jwHead} titleFont`}>
@@ -213,7 +213,7 @@ const Celebrate = () => {
                     <div className={`${styles.teamImgBox}`}>
                       <Image
                         src={premJain}
-                        alt=""
+                        alt="premJain"
                         className={`${styles.teamImg}`}
                       />
                     </div>
