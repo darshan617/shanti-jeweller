@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
-import banner from "@/assets/images/heroSlide_1.jpg";
+import banner from "@/assets/images/innerBanner.jpg";
 import styles from "@/components/about-us/AboutUs.module.css";
 
 const AboutUs = () => {
   useEffect(() => {
+    console.log("Runs once");
     gsap.registerPlugin(SplitText);
 
     const heroEl = document.querySelector(".heroAnim");

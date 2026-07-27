@@ -42,6 +42,7 @@
   height: auto !important;
   position: absolute;
   transition: all .8s ease;
+  cursor: pointer;
 }
 
 .stick .logoImg {
