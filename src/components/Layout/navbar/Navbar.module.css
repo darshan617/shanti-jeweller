@@ -154,6 +154,7 @@
   transform: translateY(100%);
   transition: transform .3s ease;
   will-change: transform;
+  cursor: pointer;
 }
 
 :global(.show) .naviWrap li:hover {
