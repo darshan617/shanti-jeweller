@@ -16,21 +16,11 @@ const ContactUs = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
-  const [errors, setErrors] = useState({
-    name: "",
-    email: "",
-    mobile: "",
-    message: "",
-  });
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]: value,
-    }));
-    setErrors((prev) => ({
-      ...prev,
-      [name]: "",
     }));
   };
   const handleSubmit = async (e) => {
