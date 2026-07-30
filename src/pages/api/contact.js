@@ -294,7 +294,6 @@ export default async function handler(req, res) {
       <tr>
       <td align="center" style="background:#6D2A46;padding:30px;">
             <img
-    //   src="cid:companylogo"
      src="${process.env.DOMAIN}/images/logo.png"
       alt="Shanti Jeweller"
       style="height:70px;margin-bottom:15px;"
