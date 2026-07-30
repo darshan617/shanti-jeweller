@@ -33,7 +33,7 @@ export const ToastProvider = ({ children }) => {
             key={toast?.id}
             className={`${styles.toast} ${styles[toast.type]}`}
           >
-            <div>
+            <div className={styles.toastMessageContainer}>
               {toast?.type === "success" && (
                 <IoMdCheckmarkCircleOutline color="white" size={20} />
               )}
