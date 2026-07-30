@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+import { ToastProvider } from "@/custom-hooks/toast/ToastProvider";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -19,7 +20,11 @@ export default function App({ Component, pageProps }) {
     return cleanup;
   }, [router.asPath]);
 
-  return <Component {...pageProps} />;
+  return (
+    <ToastProvider>
+      <Component {...pageProps} />
+    </ToastProvider>
+  );
 }
 
 const initAos = async () => {
@@ -95,7 +100,7 @@ function initSiteAnimations() {
   ScrollTrigger.addEventListener("refresh", setupSplits);
   setupSplits();
   cleanups.push(() =>
-    ScrollTrigger.removeEventListener("refresh", setupSplits)
+    ScrollTrigger.removeEventListener("refresh", setupSplits),
   );
 
   if (document.querySelector(".goldStone_1")) {
