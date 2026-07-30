@@ -62,10 +62,6 @@ export default async function handler(req, res) {
       style="height:70px;margin-bottom:15px;"
       />
       
-      <h1 style="margin:0;color:#f2d4d2;font-size:30px;">
-      SHANTI JEWELLER
-      </h1>
-      
       </td>
       </tr>
       
@@ -297,7 +293,11 @@ export default async function handler(req, res) {
       
       <tr>
       <td align="center" style="background:#6D2A46;padding:30px;">
-      
+            <img
+     src="${process.env.DOMAIN}/images/logo.png"
+      alt="Shanti Jeweller"
+      style="height:70px;margin-bottom:15px;"
+      />
       <h1 style="margin:0;color:#ffffff;font-size:28px;">
       New Enquiry Received
       </h1>
