@@ -1,11 +1,70 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import banner from "@/assets/images/heroSlide_1.jpg";
 import styles from "@/components/contact-us/ContactUs.module.css";
+import logo from "../../assets/images/logo.png";
+import { useToast } from "@/custom-hooks/toast/ToastProvider";
 
 const ContactUs = () => {
   const mapRef = useRef(null);
+  const { showToast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    message: "",
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+    setErrors((prev) => ({
+      ...prev,
+      [name]: "",
+    }));
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.mobile,
+        subject: "Website Enquiry",
+        message: formData.message,
+      }),
+    });
+    const data = await response.json();
+
+    if (data?.success) {
+      setFormData({
+        name: "",
+        email: "",
+        mobile: "",
+        message: "",
+      });
+      showToast("Enquiry submitted successfully.", "success");
+    } else {
+      console.log(data);
+      showToast(data.message, "error");
+    }
+    setLoading(false);
+  };
 
   useEffect(() => {
     gsap.registerPlugin(SplitText);
@@ -178,35 +237,63 @@ const ContactUs = () => {
                       </div>
                       <div className="col-12">
                         <label className="form-label">Name *</label>
-                        <input type="text" className="form-control" />
+                        <input
+                          type="text"
+                          className="form-control"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                        />
                         <span className={styles.errorLabel}>
                           This field is required
                         </span>
                       </div>
                       <div className="col-12">
                         <label className="form-label">Email *</label>
-                        <input type="text" className="form-control" />
+                        <input
+                          type="text"
+                          className="form-control"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                        />
                         <span className={styles.errorLabel}>
                           This field is required
                         </span>
                       </div>
                       <div className="col-12">
                         <label className="form-label">Mobile No.*</label>
-                        <input type="text" className="form-control" />
+                        <input
+                          type="text"
+                          className="form-control"
+                          name="mobile"
+                          value={formData.mobile}
+                          onChange={handleChange}
+                        />
                         <span className={styles.errorLabel}>
                           This field is required
                         </span>
                       </div>
                       <div className="col-12">
                         <label className="form-label">Message</label>
-                        <textarea className="form-control" rows={2} />
+                        <textarea
+                          className="form-control"
+                          rows={2}
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
+                        />
                         <span className={styles.errorLabel}>
                           This field is required
                         </span>
                       </div>
                       <div className="col-12 pt-3 text-center">
-                        <button type="button" className="ctaBtn">
-                          Send Message
+                        <button
+                          type="button"
+                          className="ctaBtn"
+                          onClick={handleSubmit}
+                        >
+                          {loading ? "Sending..." : "Send Message"}
                         </button>
                       </div>
                     </form>

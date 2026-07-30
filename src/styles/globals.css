@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
 @font-face {
   font-family: "Stardom";
   src: url("/fonts/Stardom-Regular.otf") format("opentype");
@@ -6,6 +7,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 :root {
   --primary: #6d2a46;
   --primaryRGB: 109, 42, 70;
@@ -22,6 +24,7 @@
   width: 7px;
   background-color: #bbb;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--primary);
   border-radius: 5px;
@@ -31,18 +34,22 @@
   background: #222;
   color: #fff;
 }
+
 ::-moz-selection {
   background: #222;
   color: #fff;
 }
+
 ::-moz-placeholder {
   color: inherit;
   opacity: 0.3;
 }
+
 ::-ms-input-placeholder {
   color: inherit;
   opacity: 0.3;
 }
+
 ::-webkit-input-placeholder {
   color: inherit;
   opacity: 0.3;
@@ -55,11 +62,13 @@
   box-shadow: none;
   border-color: inherit;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
@@ -69,17 +78,21 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
 body * {
   color: inherit;
 }
+
 body.stopScroll {
   overflow: hidden;
 }
+
 ul,
 ol,
 li {
@@ -87,16 +100,20 @@ li {
   margin: 0;
   padding: 0;
 }
+
 a {
   text-decoration: none;
 }
+
 .fw-semibold {
   font-weight: 600;
 }
+
 .fw-bold,
 strong {
   font-weight: 700;
 }
+
 p {
   line-height: 1.5;
 }
@@ -104,14 +121,17 @@ p {
 .titleFont {
   font-family: "Stardom", "Times New Roman", Times, serif;
 }
+
 .sectTitle {
   font-size: clamp(2rem, calc(1.65rem + 1.75vw), 3.75rem);
   line-height: 1.1;
 }
+
 .sectSubTitle {
   font-size: clamp(1rem, calc(0.95rem + 0.25vw), 1.25rem);
   font-weight: 600;
 }
+
 .titleLotus {
   width: 3.5rem;
   aspect-ratio: 3/2;
@@ -122,6 +142,7 @@ p {
 .bgprimary {
   background: var(--primary);
 }
+
 .bgPink {
   background: var(--pink);
 }
@@ -129,12 +150,15 @@ p {
 .textPrimary {
   color: var(--primary);
 }
+
 .textPrimarySubtle {
   color: var(--PrimarySubtle);
 }
+
 .textPink {
   color: var(--pink);
 }
+
 .textPinkDark {
   color: var(--pinkDark);
 }
@@ -158,6 +182,7 @@ p {
   transform: scale(1);
   text-align: center;
 }
+
 .ctaBtn:hover {
   color: var(--primary);
   transform: scale(1.03);
@@ -179,14 +204,13 @@ p {
   left: -250%;
   z-index: -1;
   transition: inherit;
-  background: linear-gradient(
-    90deg,
-    rgba(251, 214, 205, 1) 0%,
-    rgba(255, 243, 240, 1) 25%,
-    rgba(251, 214, 205, 1) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(251, 214, 205, 1) 0%,
+      rgba(255, 243, 240, 1) 25%,
+      rgba(251, 214, 205, 1) 50%,
+      rgba(255, 255, 255, 0) 100%);
 }
+
 .ctaBtn:hover:before {
   left: 0;
 }
@@ -196,6 +220,7 @@ p {
   width: 2rem;
   opacity: 0.5;
 }
+
 .swiperNavBtn:hover {
   opacity: 1;
 }
@@ -213,78 +238,99 @@ p {
   transform-origin: 50% 50%;
   transition: all 0.5s ease-out;
 }
+
 .slideLeft {
   opacity: 0;
   transform: translate3d(50px, 0px, 0px);
 }
+
 .slideLeft.in-view {
   opacity: 1;
   transform: translate3d(0px, 0px, 0px);
 }
+
 .slideRight {
   opacity: 0;
   transform: translate3d(-50px, 0px, 0px);
 }
+
 .slideRight.in-view {
   opacity: 1;
   transform: translate3d(0px, 0px, 0px);
 }
+
 .slideTop {
   opacity: 0;
   transform: translate3d(0px, 50px, 0px);
 }
+
 .slideTop.in-view {
   opacity: 1;
   transform: translate3d(0px, 0px, 0px);
 }
+
 .slideBottom {
   opacity: 0;
   transform: translate3d(0px, -80px, 0px);
 }
+
 .slideBottom.in-view {
   opacity: 1;
   transform: translate3d(0px, 0px, 0px);
 }
+
 .fadeGrow {
   opacity: 0;
   transform: scale(0.8);
 }
+
 .fadeGrow.in-view {
   opacity: 1;
   transform: scale(1);
 }
+
 .fadeShrink {
   opacity: 0;
   transform: scale(1.2);
 }
+
 .fadeShrink.in-view {
   opacity: 1;
   transform: scale(1);
 }
+
 .fadeIn {
   opacity: 0;
 }
+
 .fadeIn.in-view {
   opacity: 1;
 }
+
 .curtain {
   clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
 }
+
 .curtain.in-view {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
+
 .curtainLeft {
   clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 }
+
 .curtainLeft.in-view {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
+
 .flipX {
   transform: rotateY(360deg);
 }
+
 .flipX.in-view {
   transform: rotateY(0deg);
 }
+
 @font-face {
   font-family: "Stardom";
   src: url("../../public/fonts/Stardom-Regular.otf") format("opentype");
@@ -292,9 +338,11 @@ p {
   font-style: normal;
   font-display: swap;
 }
+
 .font-stardom {
   font-family: "Stardom", serif;
 }
+
 /* .font-poppins{
    font-family: 'poppins';
 } */
