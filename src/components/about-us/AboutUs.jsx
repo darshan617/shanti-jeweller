@@ -55,7 +55,7 @@ const AboutUs = () => {
                 and trust.
               </h3>
 
-              <div className="mx-auto mb-5 titleAnim" style={{ maxWidth: 850 }}>
+              <div className="mx-auto mb-5 titleAnim" style={{ maxWidth: 1050 }}>
                 <p className={`${styles.pTag}`}>
                   For over three decades, Shanti Jewellers Pvt. Ltd. has quietly
                   stood behind some of the industry's most trusted jewellery
