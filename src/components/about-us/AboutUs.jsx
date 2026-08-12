@@ -57,26 +57,24 @@ const AboutUs = () => {
 
               <div className="mx-auto mb-5 titleAnim" style={{ maxWidth: 850 }}>
                 <p className={`${styles.pTag}`}>
-                  At a very young age of 18 years founder made his remarkable
-                  beginning as a trader and earned a great angle of reputation.
-                  Their commitments and determination acted as a pillar and
-                  supported their ambitions to start with just 20 - 25 staff
-                  members gave wings to Shanti Jewellers.
+                  For over three decades, Shanti Jewellers Pvt. Ltd. has quietly
+                  stood behind some of the industry's most trusted jewellery
+                  businesses.
                 </p>
                 <p className={`${styles.pTag}`}>
-                  With over 18+ years of first hand manufacturing, trading and
-                  management exprience since 1999 in CZ Casting Jewellery Shanti
-                  Jewellers is now recognized as a Brand with its accute
-                  presence at National Level with hundreds of Staff Members and
-                  thousands of customers.
+                  Specialising in Plain Gold, Diamond, CZ, and Uncut Jewellery,
+                  we combine refined craftsmanship with advanced manufacturing
+                  to deliver collections that are distinctive, scalable, and
+                  built for today's retail landscape.
                 </p>
                 <p className={`${styles.pTag}`}>
-                  With a clear vision and focus in mind Shanti Jewellers as a
-                  Brand has continuously prioritized on Elegant Designs, Superoir
-                  Quality and Customer Centric Approach. Shanti Jewellers with
-                  its astounding facet of products takes pride in serving an
-                  idealogy in operations by keeping themselves in customers
-                  shoes.
+                  Every collaboration begins with understanding a partner's
+                  vision and ends with jewellery that reflects it—crafted with
+                  precision, delivered with consistency, and backed by a legacy
+                  of trust.
+                </p>
+                <p className={`${styles.pTag} fw-bold`}>
+                This is more than manufacturing. It's the foundation of lasting brands.
                 </p>
               </div>
             </div>
@@ -84,7 +82,9 @@ const AboutUs = () => {
             <div className="col-12 d-flex flex-wrap justify-content-center align-items-center gap-lg-5 gap-4">
               <div className="col-xl-5 col-lg-5 col-md-6 text-md-end text-center">
                 <h3 className="mb-0 lh-base sectTitle titleAnim">
-                  <strong className="textPrimary">28 years of perfecting</strong>{" "}
+                  <strong className="textPrimary">
+                    28 years of perfecting
+                  </strong>{" "}
                   every detail, refining every process, and delivering jewellery
                   that reflects excellence at every step.
                 </h3>

@@ -142,7 +142,7 @@ const Banner = () => {
             type="video/mp4"
           />
           <source
-            src="/videos/manufactuing.mp4"
+            src="/videos/hero_mob.mp4"
             media="(min-width: 992px)"
             type="video/mp4"
           />

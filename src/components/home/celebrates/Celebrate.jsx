@@ -207,19 +207,33 @@ const Celebrate = () => {
                   style={{ transitionDelay: ".3s" }}
                 >
                   <div
-                    className={`${styles.teamItem}`}
+                    className={`${styles.teamItem} d-flex flex-column pb-5`}
                     style={{ "--teamBgColor": "#f1d4cf" }}
                   >
-                    <div className={`${styles.teamImgBox}`}>
-                      <Image
-                        src={premJain}
-                        alt="premJain"
-                        className={`${styles.teamImg}`}
-                      />
+                    <div className="col-auto">
+                      <div className={`${styles.teamImgBox}`}>
+                        <Image
+                          src={premJain}
+                          alt="premJain"
+                          className={`${styles.teamImg}`}
+                        />
+                      </div>
                     </div>
-                    <div className="teamTxt py-3">
+                    <div className="col-auto teamTxt py-3">
                       <h4 className={`${styles.teamName} mb-0`}>Prem Jain</h4>
-                      <div className={`${styles.teamDesg} titleFont mb-3`}>Director</div>
+                      <div className={`${styles.teamDesg} titleFont mb-3 mx-auto w-75`}>
+                        Director - Design Development, Sales &amp; Marketing
+                      </div>
+                    </div>
+                    <div className={`${styles.teamInfo} col px-4`}>
+                      <p>
+                        At the intersection of design and market insight,
+                        Pavan Jain shapes collections that respond to
+                        evolving demand. His understanding of product and
+                        people keeps Shanti connected to retailers,
+                        wholesalers and the changing pulse of the jewellery
+                        industry.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -229,19 +243,32 @@ const Celebrate = () => {
                   style={{ transitionDelay: ".5s" }}
                 >
                   <div
-                    className={`${styles.teamItem}`}
+                    className={`${styles.teamItem} d-flex flex-column pb-5`}
                     style={{ "--teamBgColor": "#e8c2b4" }}
                   >
-                    <div className={`${styles.teamImgBox}`}>
-                      <Image
-                        src={durgaJain}
-                        alt="durgaJain"
-                        className={`${styles.teamImg}`}
-                      />
+                    <div className="col-auto">
+                      <div className={`${styles.teamImgBox}`}>
+                        <Image
+                          src={durgaJain}
+                          alt="durgaJain"
+                          className={`${styles.teamImg}`}
+                        />
+                      </div>
                     </div>
-                    <div className="teamTxt py-3">
+                    <div className="col-auto teamTxt py-3">
                       <h4 className={`${styles.teamName} mb-0`}>Durga Jain</h4>
-                      <div className={`${styles.teamDesg} titleFont mb-3`}>Director</div>
+                      <div className={`${styles.teamDesg} titleFont mb-3 mx-auto w-75`}>
+                        Director - Accounts
+                      </div>
+                    </div>
+                    <div className={`${styles.teamInfo} col px-4`}>
+                      <p>
+                        Precision, structure and accountability define
+                        Durga Jain's approach to the financial framework of
+                        Shanti. Her meticulous oversight brings clarity and
+                        consistency to the operations that keep the business
+                        moving seamlessly.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -251,19 +278,32 @@ const Celebrate = () => {
                   style={{ transitionDelay: ".7s" }}
                 >
                   <div
-                    className={`${styles.teamItem}`}
+                    className={`${styles.teamItem} d-flex flex-column pb-5`}
                     style={{ "--teamBgColor": "#c8a999" }}
                   >
-                    <div className={`${styles.teamImgBox}`}>
-                      <Image
-                        src={mukeshJain}
-                        alt="mukeshJain"
-                        className={`${styles.teamImg}`}
-                      />
+                    <div className="col-auto">
+                      <div className={`${styles.teamImgBox}`}>
+                        <Image
+                          src={mukeshJain}
+                          alt="mukeshJain"
+                          className={`${styles.teamImg}`}
+                        />
+                      </div>
                     </div>
-                    <div className="teamTxt py-3">
+                    <div className="col-auto teamTxt py-3">
                       <h4 className={`${styles.teamName} mb-0`}>Mukesh Jain</h4>
-                      <div className={`${styles.teamDesg} titleFont mb-3`}>Director</div>
+                      <div className={`${styles.teamDesg} titleFont mb-3 mx-auto w-75`}>
+                        Director - Finance &amp; Strategic Planning
+                      </div>
+                    </div>
+                    <div className={`${styles.teamInfo} col px-4`}>
+                      <p>
+                        A strategic mind behind Shanti's growth, Mukesh Jain
+                        steers the company's financial direction and
+                        long-term vision. His measured approach to planning
+                        and progress continues to strengthen the business
+                        for what lies ahead.
+                      </p>
                     </div>
                   </div>
                 </div>

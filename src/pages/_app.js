@@ -73,8 +73,8 @@ function initSiteAnimations() {
       const tlSplitBurrowing = gsap.timeline({
         scrollTrigger: {
           trigger: target,
-          start: "top 90%",
-          end: "top center",
+          start: "top 70%",
+          end: "top 10%",
           scrub: 1,
         },
       });
