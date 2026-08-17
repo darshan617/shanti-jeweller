@@ -149,7 +149,6 @@
   height: 0;
   overflow: hidden;
   transition-delay: 0.5s;
-  font-size: 16px;
 }
 .teamInfo p {
   height: 0;
@@ -159,25 +158,26 @@
   transition: all 0.8s ease;
 }
 
-.teamItem:hover {
-  background: var(--primary);
-  color: #fff;
-}
-.teamItem:hover .teamDesg {
-  color: #fff;
-}
-.teamItem:hover .teamImgBox {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  top: 0px;
-  width: 130px;
-  aspect-ratio: 1;
-}
-.teamItem:hover .teamInfo {
-  height: auto;
-}
-.teamItem:hover .teamInfo p {
-  height: 100%;
-  opacity: 0.8;
+@media (min-width: 992px) {
+  .teamItem:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+  .teamItem:hover .teamDesg {
+    color: #fff;
+  }
+  .teamItem:hover .teamImgBox {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    top: 0px;
+    width: 130px;
+  }
+  .teamItem:hover .teamInfo {
+    height: auto;
+  }
+  .teamItem:hover .teamInfo p {
+    height: 100%;
+    opacity: 0.8;
+  }
 }
 
 .aboutCircle {

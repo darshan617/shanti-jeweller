@@ -1,67 +1,51 @@
 .inBanner {
   height: calc(50vh + 3rem);
-  background: no-repeat center bottom 50%;
-  background-size: cover;
-  margin-bottom: -3rem;
+  min-height: 400px;
+  background: var(--primary);
 }
-
 .inBanImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 75% center;
+  object-position: center;
 }
 
 .pageTitle {
-  width: 170px;
-  aspect-ratio: 1;
+  width: 300px;
   transform: translateY(-50%);
-  border: 0px solid var(--pink);
-  position: relative;
-  z-index: 1;
+  border-radius: 50rem 50rem 0 0/ 25rem 25rem 0 0;
+  /* margin-top: 40px; */
 }
-
-.pageTitle:before,
-.pageTitle:after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, .2);
-  display: block;
-  border-radius: 50%;
-  z-index: -1;
-  position: absolute;
-  top: 0;
-}
-
-.pageTitle:before {
-  transform: scale(1.3);
-}
-
-.pageTitle:after {
-  transform: scale(1.15);
-}
+/* .pageTitle {width:170px;aspect-ratio:1;transform:translateY(-50%);border:0px solid var(--pink);position:relative;z-index:1;}
+.pageTitle:before, .pageTitle:after {content:'';width:100%;height:100%;background:rgba(255, 255, 255, .2);display:block;border-radius:50%;z-index:-1;position:absolute;top:0;}
+.pageTitle:before {transform:scale(1.3);}
+.pageTitle:after {transform:scale(1.15);} */
 
 .aboutPage {
   position: relative;
-}
-
-.aboutPage:before {
-  content: '';
-  width: 100%;
-  height: 150px;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 50%, rgba(var(--pinkRGB), 1) 100%);
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-  z-index: 1;
 }
 
 .pTag {
   font-family: Poppins, sans-serif;
   font-size: 16px;
   font-weight: 400;
+}
+
+@media (max-width: 575px) {
+  /* .inBanner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  } */
+
+  /* .inBanner{
+    height: auto;
+    min-height: 200px;
+    object-fit: cover;
+    object-position: center;
+  } */
+  /* .pageTitle{
+    margin-top: 0px;
+  } */
 }

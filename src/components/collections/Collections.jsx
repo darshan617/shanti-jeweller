@@ -4,37 +4,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
-import banner from "@/assets/images/heroSlide_1.jpg";
-import colln1 from "@/assets/images/collections/1.jpg";
-import colln2 from "@/assets/images/collections/2.jpg";
-import colln3 from "@/assets/images/collections/3.jpg";
-import colln4 from "@/assets/images/collections/4.jpg";
-import colln5 from "@/assets/images/collections/5.jpg";
-import colln6 from "@/assets/images/collections/6.jpg";
-import colln7 from "@/assets/images/collections/7.jpg";
-import colln8 from "@/assets/images/collections/8.jpg";
-import colln9 from "@/assets/images/collections/9.jpg";
-import colln10 from "@/assets/images/collections/10.jpg";
-import colln11 from "@/assets/images/collections/11.jpg";
-import colln12 from "@/assets/images/collections/12.jpg";
-import colln13 from "@/assets/images/collections/13.jpg";
+import banner from "@/assets/images/collection_banner.jpg";
+import colln1 from "@/assets/images/colln_Karat5.jpg";
+import colln2 from "@/assets/images/colln_Swaarnim.jpg";
+import colln3 from "@/assets/images/colln_Svara.jpg";
+import colln4 from "@/assets/images/colln_Raahat.jpg";
 import styles from "@/components/collections/Collections.module.css";
+import Image from "next/image";
+import Link from "next/link";
 
-const collectionImages = [
-  colln1,
-  colln2,
-  colln3,
-  colln4,
-  colln5,
-  colln6,
-  colln7,
-  colln8,
-  colln9,
-  colln10,
-  colln11,
-  colln12,
-  colln13,
-];
 
 const Collections = () => {
   useEffect(() => {
@@ -108,42 +86,60 @@ const Collections = () => {
     <>
       <section
         className={`${styles.inBanner} bgprimary`}
-        style={{ backgroundImage: `url(${banner.src})` }}
+        style={{ backgroundImage: `url(${banner.src})`, backgroundSize: "cover", backgroundPosition: "center" }}
       />
 
       <section className={`${styles.aboutPage} sitePadding rounded-top-5`}>
         <div className="container-fluid pb-5">
+          <div className={`${styles.pageTitle} text-center mx-auto bg-white`}>
+            <div className="h-100 pt-4 d-flex flex-column align-items-center justify-content-center">
+              <div className="titleLotus mb-3 animateThis fadeGrow"></div>
+              <h2 className="sectSubTitle text-uppercase animateThis fadeIn">
+                Collections
+              </h2>
+            </div>
+          </div>
+
           <div className="d-flex flex-wrap justify-content-center gap-5 position-relative z-1 mb-5">
             <div className="col-12 text-center">
-              <div className={`${styles.pageTitle} bg-white rounded-circle text-center ratio ratio-1x1 mx-auto shadow-lg`}>
-                <div className="h-100 d-flex flex-column align-items-center justify-content-center">
-                  <div className="titleLotus mb-3 animateThis"/>
-                  <h2 className="sectSubTitle text-uppercase animateThis">
-                    Collections
-                  </h2>
-                </div>
-              </div>
-
-              <h3 className="mb-5 mx-auto heroAnim" style={{ maxWidth: 1300 }}>
-                Every piece of jewelry we create tells a
+              <h3 className="mx-auto heroAnim" style={{maxWidth: "1300px"}}>
+                Discover fine jewellery collections crafted for one who value
                 <span className="sectTitle titleFont textPrimary d-block pt-3 lh-base">
-                  story of passion, dedication, and mastered craftsmanship.
+                  quality, consistency, and innovation.
                 </span>
               </h3>
             </div>
 
-            <div className="col-lg-8">
-              <div className="row justify-content-around g-md-5 g-4 collectionList">
-                {collectionImages.map((image, index) => (
-                  <div
-                    key={index}
-                    className="col-md-5 col-6 animateThis slideTop"
-                  >
-                    <a href={image.src}>
-                      <img src={image.src} alt="collection-image" />
-                    </a>
+            <div className="col-lg-8 p-4 rounded-4">
+              <div className={`${styles.collectionGrid} d-flex flex-column d-sm-grid gap-3 gap-md-4`}>
+                <div className={`${styles.gDiv1}`}>
+                  <div className={`${styles.collnBox}`}>
+                    <Link href="/karat" className="">
+                      <Image src={colln1} alt="Karat5" />
+                    </Link>
                   </div>
-                ))}
+                </div>
+                <div className={`${styles.gDiv2}`}>
+                  <div className={`${styles.collnBox}`}>
+                    <Link href="/swaarniim" className="">
+                      <Image src={colln2} alt="Swaarnim" />
+                    </Link>
+                  </div>
+                </div>
+                <div className={`${styles.gDiv3}`}>
+                  <div className={`${styles.collnBox}`}>
+                    <Link href="/svara" className="">
+                      <Image src={colln3} alt="Svara" />
+                    </Link>
+                  </div>
+                </div>
+                <div className={`${styles.gDiv4}`}>
+                  <div className={`${styles.collnBox}`}>
+                    <Link href="/raahat" className="">
+                      <Image src={colln4} alt="Raahat" />
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

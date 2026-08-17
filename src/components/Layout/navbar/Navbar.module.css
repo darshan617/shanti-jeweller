@@ -162,6 +162,7 @@
 }
 
 :global(.show) .naviWrap li a {
+  color: var(--pinkDark);
   transform: translateY(0%);
   transition: color .3s ease, transform .8s ease;
 }

@@ -1,8 +1,14 @@
 .inBanner {
   height: calc(50vh + 3rem);
-  background: no-repeat center bottom 27%;
-  background-size: cover;
-  margin-bottom: -3rem;
+  min-height: 400px;
+  background: var(--primary); /*margin-bottom:-3rem;*/
+}
+
+.inBanImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* .pageTitle {
@@ -12,15 +18,12 @@
 } */
 
 .pageTitle {
-  width: 170px;
-  aspect-ratio: 1;
+  width: 300px;
   transform: translateY(-50%);
-  border: 0px solid var(--pink);
-  position: relative;
-  z-index: 1;
+  border-radius: 50rem 50rem 0 0/ 25rem 25rem 0 0;
 }
 
-.pageTitle:before,
+/* .pageTitle:before,
 .pageTitle:after {
   content: '';
   width: 100%;
@@ -31,7 +34,7 @@
   z-index: -1;
   position: absolute;
   top: 0;
-}
+} */
 
 .pageTitle:before {
   transform: scale(1.3);
@@ -45,7 +48,7 @@
   position: relative;
 }
 
-.aboutPage::before {
+/* .aboutPage::before {
   content: "";
   width: 100%;
   height: 150px;
@@ -61,7 +64,7 @@
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
   z-index: 1;
-}
+} */
 
 .mapWrapper {
   aspect-ratio: 5/4;
@@ -102,6 +105,10 @@
 
 .formFormat :global(.error) :global(.form-control) {
   border-color: #ff0000;
+}
+
+.pTag{
+  line-height: 2;
 }
 
 @media (min-width: 768px) {
