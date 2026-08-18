@@ -2,8 +2,7 @@ import Image from "next/image";
 import React from "react";
 import styles from "@/components/home/signature-collection/SignatureCollection.module.css";
 import swaarNim from "@/assets/images/colln_Swaarnim.jpg";
-import collnSvara from "@/assets/images/colln_Svara.jpg";
-import collnRaahat from "@/assets/images/colln_Raahat.jpg";
+import collnSvara from "@/assets/images/colln_Svara2.jpg";
 import collnKarat5 from "@/assets/images/colln_Karat5.jpg";
 import Link from "next/link";
 
@@ -26,36 +25,37 @@ const SignatureCollection = () => {
             </div>
           </div>
 
-          <div className="row g-4 mb-5">
-            <div className="col-md col-sm-6 order-md-1 animateThis fadeShrink">
-              <div className={`${styles.collnBox}`}>
-                <Link href="/karat">
-                  <Image src={collnKarat5} alt="collnKarat5" />
-                </Link>
+          <div className={`${styles.collnContainer} mx-auto`} >
+            <div className="row g-5 mb-5">
+              <div className="col-md col-sm-6 animateThis slideLeft in-view">
+                <div className={`${styles.collnBox}`}>
+                  <Link href="/karat">
+                    <Image src={collnKarat5} alt="collnKarat5" />
+                  </Link>
+                </div>
               </div>
-            </div>
-            <div className="col-md col-sm-6 order-md-3 animateThis fadeShrink">
-              <div className={`${styles.collnBox}`}>
-                <Link href="/swaarniim">
-                  <Image src={swaarNim} alt="swaarnim-gold" />
-                </Link>
+              <div className="col-md col-sm-6 animateThis slideTop in-view">
+                <div className={`${styles.collnBox}`}>
+                  <Link href="/swaarniim">
+                    <Image src={swaarNim} alt="swaarnim-gold" />
+                  </Link>
+                </div>
               </div>
-            </div>
-            <div className="col-md col-sm-12 d-flex flex-md-column flex-sm-row flex-column gap-4 order-md-2">
-              <div className="col animateThis fadeShrink">
+              {/* <div className="col-md col-sm-12 d-flex flex-md-column flex-sm-row flex-column gap-4 order-md-2"> */}
+              <div className="col-md col-sm-6 animateThis slideRight in-view">
                 <div className={`${styles.collnBox}`}>
                   <Link href="/svara">
                     <Image src={collnSvara} alt="collnSvara" />
                   </Link>
                 </div>
               </div>
-              <div className="col animateThis fadeShrink">
+              {/* <div className="col animateThis fadeShrink">
                 <div className={`${styles.collnBox}`}>
                   <Link href="/raahat">
                     <Image src={collnRaahat} alt="collnRaahat" />
                   </Link>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 

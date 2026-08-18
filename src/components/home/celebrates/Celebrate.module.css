@@ -109,6 +109,7 @@
   font-family: Poppins, sans-serif;
   font-size: 16px;
   font-weight: 400;
+  margin: 10px;
 }
 
 .teamItem {
@@ -145,20 +146,8 @@
   color: var(--primary);
   font-style: italic;
 }
-.teamInfo {
-  height: 0;
-  overflow: hidden;
-  transition-delay: 0.5s;
-}
-.teamInfo p {
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-  margin: 0;
-  transition: all 0.8s ease;
-}
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .teamItem:hover {
     background: var(--primary);
     color: #fff;
@@ -171,8 +160,20 @@
     top: 0px;
     width: 130px;
   }
+  .teamInfo {
+    height: 0;
+    overflow: hidden;
+    transition-delay: 0.5s;
+  }
   .teamItem:hover .teamInfo {
     height: auto;
+  }
+  .teamInfo p {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin: 0;
+    transition: all 0.8s ease;
   }
   .teamItem:hover .teamInfo p {
     height: 100%;

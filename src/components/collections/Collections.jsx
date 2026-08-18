@@ -7,12 +7,10 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import banner from "@/assets/images/collection_banner.jpg";
 import colln1 from "@/assets/images/colln_Karat5.jpg";
 import colln2 from "@/assets/images/colln_Swaarnim.jpg";
-import colln3 from "@/assets/images/colln_Svara.jpg";
-import colln4 from "@/assets/images/colln_Raahat.jpg";
+import colln3 from "@/assets/images/colln_Svara2.jpg";
 import styles from "@/components/collections/Collections.module.css";
 import Image from "next/image";
 import Link from "next/link";
-
 
 const Collections = () => {
   useEffect(() => {
@@ -86,7 +84,11 @@ const Collections = () => {
     <>
       <section
         className={`${styles.inBanner} bgprimary`}
-        style={{ backgroundImage: `url(${banner.src})`, backgroundSize: "cover", backgroundPosition: "center" }}
+        style={{
+          backgroundImage: `url(${banner.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       />
 
       <section className={`${styles.aboutPage} sitePadding rounded-top-5`}>
@@ -102,7 +104,7 @@ const Collections = () => {
 
           <div className="d-flex flex-wrap justify-content-center gap-5 position-relative z-1 mb-5">
             <div className="col-12 text-center">
-              <h3 className="mx-auto heroAnim" style={{maxWidth: "1300px"}}>
+              <h3 className="mx-auto heroAnim" style={{ maxWidth: "1300px" }}>
                 Discover fine jewellery collections crafted for one who value
                 <span className="sectTitle titleFont textPrimary d-block pt-3 lh-base">
                   quality, consistency, and innovation.
@@ -110,36 +112,37 @@ const Collections = () => {
               </h3>
             </div>
 
-            <div className="col-lg-8 p-4 rounded-4">
-              <div className={`${styles.collectionGrid} d-flex flex-column d-sm-grid gap-3 gap-md-4`}>
-                <div className={`${styles.gDiv1}`}>
+            <div className={`${styles.collnContainer} mx-auto col-lg-10 p-4 rounded-4`}>
+              <div className="row g-5 mb-5">
+                <div className="col-md col-sm-6 animateThis slideLeft in-view " style={{ transitionDelay: "0.8s" }}>
                   <div className={`${styles.collnBox}`}>
-                    <Link href="/karat" className="">
-                      <Image src={colln1} alt="Karat5" />
+                    <Link href="/karat">
+                      <Image src={colln1} alt="collnKarat5" />
                     </Link>
                   </div>
                 </div>
-                <div className={`${styles.gDiv2}`}>
+                <div className="col-md col-sm-6 animateThis slideTop in-view">
                   <div className={`${styles.collnBox}`}>
-                    <Link href="/swaarniim" className="">
-                      <Image src={colln2} alt="Swaarnim" />
+                    <Link href="/swaarniim">
+                      <Image src={colln2} alt="swaarnim-gold" />
                     </Link>
                   </div>
                 </div>
-                <div className={`${styles.gDiv3}`}>
+                {/* <div className="col-md col-sm-12 d-flex flex-md-column flex-sm-row flex-column gap-4 order-md-2"> */}
+                <div className="col-md col-sm-6 animateThis slideRight in-view " style={{ transitionDelay: "0.8s" }}>
                   <div className={`${styles.collnBox}`}>
-                    <Link href="/svara" className="">
-                      <Image src={colln3} alt="Svara" />
+                    <Link href="/svara">
+                      <Image src={colln3} alt="collnSvara" />
                     </Link>
                   </div>
                 </div>
-                <div className={`${styles.gDiv4}`}>
-                  <div className={`${styles.collnBox}`}>
-                    <Link href="/raahat" className="">
-                      <Image src={colln4} alt="Raahat" />
-                    </Link>
-                  </div>
+                {/* <div className="col animateThis fadeShrink">
+                <div className={`${styles.collnBox}`}>
+                  <Link href="/raahat">
+                    <Image src={collnRaahat} alt="collnRaahat" />
+                  </Link>
                 </div>
+              </div> */}
               </div>
             </div>
           </div>

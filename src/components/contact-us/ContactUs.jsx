@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
-import banner from "@/assets/images/innerBanner.jpg";
+import banner from "@/assets/images/contactBanner.jpg";
 import styles from "@/components/contact-us/ContactUs.module.css";
 import { useToast } from "@/custom-hooks/toast/ToastProvider";
 import Link from "next/link";
+import Image from "next/image";
 
 const ContactUs = () => {
   const mapRef = useRef(null);
@@ -132,10 +133,13 @@ const ContactUs = () => {
 
   return (
     <>
-      <section
-        className={`${styles.inBanner} bgprimary`}
-        style={{ backgroundImage: `url(${banner.src}) ` }}
-      />
+      <section className={`${styles.inBanner}`}>
+        <Image src={banner}
+         alt="banner" 
+        //  height={}
+        //  width={1000}
+         className={`${styles.inBanImg}`} />
+      </section>
 
       <section className={`${styles.aboutPage} sitePadding rounded-top-5`}>
         <div className="container-fluid pb-5">

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
-import banner from "@/assets/images/collection_banner.jpg";
+import banner from "@/assets/images/aboutBanner.jpg";
 import styles from "@/components/about-us/AboutUs.module.css";
 import Image from "next/image";
 

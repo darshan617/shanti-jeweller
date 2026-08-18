@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import goldStone from "@/assets/images/goldStone_1.png";
+import ring from "@/assets/images/ring.png";
 import jewellryDiamond from "@/assets/images/jewellry_diamond.jpg";
 import jewellryCZ from "@/assets/images/jewellry_CZ.jpg";
 import jewellryGold from "@/assets/images/jewellry_gold.jpg";
@@ -38,7 +38,7 @@ const Celebrate = () => {
         </div>
         <div className={`${styles.stoneBox} py-5 py-lg-0`}>
           <Image
-            src={goldStone}
+            src={ring}
             className={`${styles.goldStone_1} goldStone_1`}
           />
           <div className={`${styles.aboutYear} aboutYear titleFont`}>

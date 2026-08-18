@@ -2,7 +2,7 @@
 
 import React from "react";
 import styles from "@/components/home/manufacturing/Manufacturing.module.css";
-import goldStone2 from '@/assets/images//goldStone_2.png'
+import bracelet from '@/assets/images/bracelet.png'
 import Image from "next/image";
 
 const Manufacturing = () => {
@@ -61,7 +61,7 @@ const Manufacturing = () => {
             <div className={`${styles.valueStone} col-lg col-7 order-lg-2  text-center animateThis slideBottom`}>
               <div className={`${styles.valueTxt} titleFont textPink`}>Values</div>
               <Image
-                src={goldStone2}
+                src={bracelet}
                 alt="goldStone"
                 className="w-100 goldStone_2 h-auto"
               />
