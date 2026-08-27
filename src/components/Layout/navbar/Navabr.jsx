@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import logo from "@/assets/images/logo.png";
 import styles from "@/components/Layout/navbar/Navbar.module.css";
+import Link from "next/link";
 
 export default function Header() {
   const router = useRouter();
@@ -38,7 +39,7 @@ export default function Header() {
       <div className={`${styles.pgHeadMain} container-fluid rounded`}>
         <div className="row justify-content-between align-items-center">
           <div className="col-auto">
-            <a onClick={() => router.push("/")} className={`${styles.logoBox} `}>
+            <Link href="/" className={`${styles.logoBox} `}>
               <Image
                 src={logo}
                 alt="Shanti Jewellers"
@@ -46,7 +47,7 @@ export default function Header() {
                 className={`${styles.logoImg}`}
                 fill
               />
-            </a>
+            </Link>
           </div>
           <div className="col-auto">
             <div className="hstack gap-4">
