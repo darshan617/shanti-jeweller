@@ -165,12 +165,14 @@
   color: var(--pinkDark);
   transform: translateY(0%);
   transition: color .3s ease, transform .8s ease;
+  
 }
 
 :global(.show) .naviWrap li:hover a {
   color: var(--pinkDark);
   transform: translateY(0%) translateX(-2vw);
   transition: all .5s ease;
+  text-shadow: 1px 1px 0 #4e172e, 2px 2px 0 #4e172e, 3px 3px 0 #4e172e, 4px 4px 0 #4e172e, 5px 5px 0 #4e172e, 6px 6px 0 #4e172e, 7px 7px 0 #4e172e, 8px 8px 0 #4e172e, 9px 9px 0 #4e172e, 10px 10px 0 #4e172e, 11px 11px 0 #4e172e, 12px 12px 0 #4e172e, 13px 13px 0 #4e172e, 14px 14px 0 #4e172e, 15px 15px 0 #4e172e, 16px 16px 0 #4e172e, 17px 17px 0 #4e172e, 18px 18px 0 #4e172e, 19px 19px 0 #4e172e, 20px 20px 0 #4e172e;
 }
 
 @media (min-width:992px) {

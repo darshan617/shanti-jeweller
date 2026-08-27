@@ -2,7 +2,7 @@
 
 import React from "react";
 import styles from "@/components/home/manufacturing/Manufacturing.module.css";
-import bracelet from '@/assets/images/bracelet.png'
+import bracelet from "@/assets/images/bracelet.png";
 import Image from "next/image";
 
 const Manufacturing = () => {
@@ -26,12 +26,13 @@ const Manufacturing = () => {
                 className={`${styles.videoBox} w-100 position-relative rounded-5`}
               >
                 <video
-                  src="/videos/manufactuing.mp4"
+                  src="/videos/shanti_jewellers_manufacturing.mp4"
                   className="w-100 h-100 position-absolute top-0 start-0 object-fit-cover videoPoster rounded-5 animateThis fadeIn"
                   autoPlay
                   loop
                   muted
-                  // poster="images/videoImg.jpg"
+                  playsInline
+                  poster="/images/videoImg.jpg"
                 ></video>
                 <div className={`${styles.onVideoTxt}`}>
                   <div
@@ -58,8 +59,12 @@ const Manufacturing = () => {
           </div>
 
           <div className="row align-items-center justify-content-center pt-5 g-md-0 g-3">
-            <div className={`${styles.valueStone} col-lg col-7 order-lg-2  text-center animateThis slideBottom`}>
-              <div className={`${styles.valueTxt} titleFont textPink`}>Values</div>
+            <div
+              className={`${styles.valueStone} col-lg col-7 order-lg-2 text-center animateThis slideBottom in-view`}
+            >
+              <div className={`${styles.valueTxt} titleFont textPink`}>
+                Values
+              </div>
               <Image
                 src={bracelet}
                 alt="goldStone"
@@ -67,7 +72,9 @@ const Manufacturing = () => {
               />
             </div>
             <div className="col-lg col-md-6 order-lg-1">
-              <div className={`${styles.valueCombo} d-flex flex-column gap-lg-5 gap-3 mx-auto `}>
+              <div
+                className={`${styles.valueCombo} d-flex flex-column gap-lg-5 gap-3 mx-auto `}
+              >
                 <div className="animateThis slideRight">
                   <div className={`${styles.valueItem}`}>
                     <h3 className={`${styles.valueHead} titleFont textPrimary`}>
@@ -81,7 +88,9 @@ const Manufacturing = () => {
                 </div>
                 <div className="animateThis slideLeft">
                   <div className={`${styles.valueItem}`}>
-                    <h3 className={`${styles.valueHead} titleFont textPrimary`}>Quality</h3>
+                    <h3 className={`${styles.valueHead} titleFont textPrimary`}>
+                      Quality
+                    </h3>
                     <p className={`${styles.pTag}`}>
                       Only the finest materials are selected for lasting beauty.
                     </p>
@@ -90,10 +99,14 @@ const Manufacturing = () => {
               </div>
             </div>
             <div className="col-lg col-md-6 order-lg-3">
-              <div className={`${styles.valueCombo} d-flex flex-column gap-lg-5 gap-3 mx-auto`}>
+              <div
+                className={`${styles.valueCombo} d-flex flex-column gap-lg-5 gap-3 mx-auto`}
+              >
                 <div className="animateThis slideLeft">
                   <div className={`${styles.valueItem}`}>
-                    <h3 className={`${styles.valueHead} titleFont textPrimary`}>Trust</h3>
+                    <h3 className={`${styles.valueHead} titleFont textPrimary`}>
+                      Trust
+                    </h3>
                     <p className={`${styles.pTag}`}>
                       Only the finest materials are selected for lasting beauty.
                     </p>
