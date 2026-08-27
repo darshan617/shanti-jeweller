@@ -1,101 +1,107 @@
 .collnBox {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: relative;
-    border-radius: 1rem;
-    z-index: 1;
- }
- 
- .collnBox img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: inherit;
- }
- 
- .collnBox:before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .3s ease;
-    border-radius: 1.2rem;
- }
- 
- .collnBox:hover:before {
-    width: calc(100% + 6px);
-    height: calc(100% + 6px);
-    top: -3px;
-    left: -3px;
-    box-shadow: 0 0 50px rgba(var(--primaryRGB), .8);
- }
- 
- .collnBox:hover {
-    z-index: 5;
- }
- 
- .collnBox a {
-    width: 100%;
-    height: 100%;
-    display: block;
-    overflow: hidden;
-    border-radius: 1rem;
-    position: relative;
- }
- 
- .collnBox a:after {
-    content: '';
-    width: 200%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 200%;
-    background: linear-gradient(105deg, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 80%);
-    transition: none;
-    filter: brightness(200%);
-    z-index: 1;
- }
- 
- .collnBox:hover a:after {
-    right: -200%;
-    transition: all 2s .1s ease;
- }
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  top: 0;
+  border-radius: 1rem;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+.collnBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+}
+.collnBox:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s ease;
+  border-radius: 1.2rem;
+}
+.collnBox:hover:before {
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  top: -3px;
+  left: -3px;
+  box-shadow: 0 10px 50px rgba(var(--primaryRGB), 0.5);
+}
+.collnBox:hover {
+  z-index: 5;
+  top: -10px;
+}
 
- .titleAnim{
-    font-size: 16px;
-    font-weight: 400;
-    font-family: Poppins, sans-serif;
- }
+.collnBox a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: 1rem;
+  position: relative;
+}
+.collnBox a:after {
+  content: "";
+  width: 200%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 200%;
+  background: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  transition: none;
+  filter: brightness(200%);
+  z-index: 1;
+}
+.collnBox:hover a:after {
+  right: -200%;
+  transition: all 2s 0.1s ease;
+}
 
- .uspItem {
-    color: var(--PrimarySubtle);
-    transition: all .5s ease;
- }
- 
- .uspIcon {
-    width: 3rem;
-    aspect-ratio: 1;
-    fill: currentColor;
- }
- 
- .uspText {
-    font-size: clamp(1.00rem, calc(0.975rem + 0.125vw), 1.13rem);
- }
- 
- .uspItem:hover {
-    color: var(--primary);
- }
- 
+.collnContainer {
+  max-width: 1600px;
+}
+
+.titleAnim {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Poppins, sans-serif;
+}
+
+.uspItem {
+  color: var(--PrimarySubtle);
+  transition: all 0.5s ease;
+}
+
+.uspIcon {
+  width: 3rem;
+  aspect-ratio: 1;
+  fill: currentColor;
+}
+
+.uspText {
+  font-size: clamp(1rem, calc(0.975rem + 0.125vw), 1.13rem);
+}
+
+.uspItem:hover {
+  color: var(--primary);
+}
+
 .titleLotus {
-    width: 3.5rem;
-    aspect-ratio: 3/2;
-    background: var(--lotus) no-repeat center/contain;
-    display: inline-block;
- }
+  width: 3.5rem;
+  aspect-ratio: 3/2;
+  background: var(--lotus) no-repeat center/contain;
+  display: inline-block;
+}

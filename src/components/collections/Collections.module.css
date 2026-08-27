@@ -1,37 +1,33 @@
 .inBanner {
   height: calc(50vh + 3rem);
-  background: no-repeat center bottom 27%;
-  background-size: cover;
-  margin-bottom: -3rem;
+  min-height: 400px;
+  background: var(--primary); /*margin-bottom:-3rem;*/
 }
-
-/* .pageTitle {
-  width: 170px;
-  transform: translateY(-50%);
-  border: 0px solid var(--pink);
-} */
-
-.pageTitle {
-  width: 170px;
-  aspect-ratio: 1;
-  transform: translateY(-50%);
-  border: 0px solid var(--pink);
-  position: relative;
-  z-index: 1;
-}
-
-.pageTitle:before,
-.pageTitle:after {
-  content: '';
+.inBanImg {
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, .2);
+  object-fit: cover;
+  object-position: center;
+}
+
+.pageTitle {
+  width: 300px;
+  transform: translateY(-50%);
+  border-radius: 50rem 50rem 0 0/ 25rem 25rem 0 0;
+}
+
+/* .pageTitle:before,
+.pageTitle:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
   display: block;
   border-radius: 50%;
   z-index: -1;
   position: absolute;
   top: 0;
-}
+} */
 
 .pageTitle:before {
   transform: scale(1.3);
@@ -45,7 +41,7 @@
   position: relative;
 }
 
-.aboutPage::before {
+/* .aboutPage::before {
   content: "";
   width: 100%;
   height: 150px;
@@ -61,7 +57,7 @@
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
   z-index: 1;
-}
+} */
 
 :global(.collectionList) > div {
   position: relative;
@@ -99,4 +95,96 @@
   object-fit: cover;
   object-position: center;
   border: 0;
+}
+
+.collnBox {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  border-radius: 1rem;
+  z-index: 1;
+}
+.collnBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+}
+
+.collnBox:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s ease;
+  border-radius: 1.2rem;
+}
+.collnBox:hover:before {
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  top: -3px;
+  left: -3px;
+  box-shadow: 0 0 50px rgba(var(--primaryRGB), 0.8);
+}
+.collnBox:hover {
+  z-index: 5;
+}
+
+.collnBox a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: 1rem;
+  position: relative;
+}
+.collnBox a:after {
+  content: "";
+  width: 200%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 200%;
+  background: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  transition: none;
+  filter: brightness(200%);
+  z-index: 1;
+}
+.collnBox:hover a:after {
+  right: -200%;
+  transition: all 2s 0.1s ease;
+}
+
+@media (min-width: 576px) {
+  :global(.collectionGrid) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .gDiv1 {
+    grid-row: span 2 / span 2;
+  }
+  .gDiv2 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+  .gDiv3 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+  .gDiv4 {
+    grid-row-start: 3;
+  }
 }

@@ -74,7 +74,7 @@ function initSiteAnimations() {
         scrollTrigger: {
           trigger: target,
           start: "top 90%",
-          end: "top center",
+          end: "top 50%",
           scrub: 1,
         },
       });

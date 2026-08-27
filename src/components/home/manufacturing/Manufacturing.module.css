@@ -1,119 +1,115 @@
 .manufSection:before {
-    content: '';
-    width: 23%;
-    aspect-ratio: 3/2;
-    display: block;
-    position: absolute;
-    right: -1%;
-    top: 3%;
-    background: var(--lotusWhite) no-repeat center / contain;
-    opacity: .1;
- }
- 
- .manufSection:after {
-    content: '';
-    width: 100%;
-    height: 35%;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
- }
- 
- .videoBox {
-    aspect-ratio: 10/5;
- }
- 
- .onVideoTxt {
-    width: 100%;
-    display: block;
-    position: absolute;
-    left: 5%;
-    top: 0;
-    transform: translateY(-40%);
-    opacity: .1;
-    font-size: 9vw;
-    font-weight: 550;
-    color: #fff;
-    line-height: .9;
-    text-align: left;
- }
- 
- .videoBtn {
-    width: 100px;
-    height: 100px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, .1);
-    position: relative;
-    z-index: 1;
- }
- 
- .videoBtn:hover {
-    background: var(--primary);
- }
- 
- .videoBtn:before {
-    content: '';
-    width: 50%;
-    height: 50%;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'><path d='m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z'/></svg>") no-repeat center / 100% 100%;
- }
- 
- @media (min-width:576px) {
-    .videoBox {
-       aspect-ratio: 10/3.5;
-    }
- }
+  content: "";
+  width: 23%;
+  aspect-ratio: 3/2;
+  display: block;
+  position: absolute;
+  right: -1%;
+  top: 3%;
+  background: var(--lotusWhite) no-repeat center / contain;
+  opacity: 0.1;
+}
 
+.manufSection:after {
+  content: "";
+  width: 100%;
+  height: 35%;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+}
 
- .valueStone {
-    position: relative;
- }
- 
- .valueTxt {
-    font-size: 10vw;
-    line-height: 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: center;
-    z-index: -1;
- }
- 
- .valueCombo {
-    max-width: 300px;
- }
- 
- .valueHead {
-    font-size: clamp(1.25rem, calc(0.977rem + 1.364vw), 2.00rem);
- }
+.videoBox {
+  aspect-ratio: 10 / 4.5 !important;
+}
 
- .goldStone_2{
-    height: auto;
- }
- 
- @media (min-width:992px) {
-    .valueItem {
-       transition: all .5s ease-in-out;
-    }
- 
-    .valueItem:hover {
-       transform: scale(1.05);
-       transition-delay: 0;
-    }
-    
- }
+.onVideoTxt {
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 5%;
+  top: 0;
+  transform: translateY(-40%);
+  opacity: 0.1;
+  font-size: 9vw;
+  font-weight: 550;
+  color: #fff;
+  line-height: 0.9;
+  text-align: left;
+}
 
- .pTag{
-    font-family: Poppins, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
- }
+.videoBtn {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.videoBtn:hover {
+  background: var(--primary);
+}
+
+.videoBtn:before {
+  content: "";
+  width: 50%;
+  height: 50%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'><path d='m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z'/></svg>")
+    no-repeat center / 100% 100%;
+}
+
+@media (min-width: 576px) {
+  .videoBox {
+    aspect-ratio: 10/3.5;
+  }
+}
+
+.valueStone {
+  position: relative;
+}
+.valueTxt {
+  font-size: 10vw;
+  line-height: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  z-index: -1;
+}
+
+.valueCombo {
+  max-width: 300px;
+}
+.valueHead {
+  font-size: clamp(1.25rem, calc(0.977rem + 1.364vw), 2rem);
+}
+
+.goldStone_2 {
+  height: auto;
+}
+
+@media (min-width: 992px) {
+  .valueItem {
+    transition: all 0.5s ease-in-out;
+  }
+  .valueItem:hover {
+    transform: scale(1.05);
+    transition-delay: 0;
+  }
+}
+
+.pTag {
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}

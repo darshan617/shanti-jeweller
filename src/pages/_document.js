@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <title>Shanti Jewellers - Glimmering Grace Glamour</title>
+        <link rel="icon" href="/lotus.svg" type="image/svg+xml" />
         <meta
           name="description"
           content="Shanti Jewellers — fine diamond, gold, and CZ jewellery crafted with quality and care since 1999."

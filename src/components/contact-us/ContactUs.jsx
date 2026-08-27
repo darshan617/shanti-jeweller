@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
-import banner from "@/assets/images/heroSlide_1.jpg";
+import banner from "@/assets/images/contactBanner.jpg";
 import styles from "@/components/contact-us/ContactUs.module.css";
-import logo from "../../assets/images/logo.png";
 import { useToast } from "@/custom-hooks/toast/ToastProvider";
+import Link from "next/link";
+import Image from "next/image";
 
 const ContactUs = () => {
   const mapRef = useRef(null);
@@ -16,7 +17,7 @@ const ContactUs = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
- 
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -132,20 +133,21 @@ const ContactUs = () => {
 
   return (
     <>
-      <section
-        className={`${styles.inBanner} bgprimary`}
-        style={{ backgroundImage: `url(${banner.src})` }}
-      />
+      <section className={`${styles.inBanner}`}>
+        <Image src={banner}
+         alt="banner" 
+        //  height={}
+        //  width={1000}
+         className={`${styles.inBanImg}`} />
+      </section>
 
       <section className={`${styles.aboutPage} sitePadding rounded-top-5`}>
         <div className="container-fluid pb-5">
           <div className="d-flex flex-wrap justify-content-center gap-5 position-relative z-1 mb-5">
             <div className="col-lg-9 text-center">
-              <div
-                className={`${styles.pageTitle} bg-white rounded-circle text-center ratio ratio-1x1 mx-auto shadow-lg`}
-              >
-                <div className="h-100 d-flex flex-column align-items-center justify-content-center">
-                  <div className="titleLotus mb-3 animateThis fadeGrow" />
+              <div className={`${styles.pageTitle} text-center mx-auto bg-white`}>
+                <div className="h-100 pt-4 d-flex flex-column align-items-center justify-content-center">
+                  <div className="titleLotus mb-3 animateThis fadeGrow"></div>
                   <h2 className="sectSubTitle text-uppercase animateThis fadeIn">
                     Contact Us
                   </h2>
@@ -180,8 +182,8 @@ const ContactUs = () => {
                       Shanti Jewellers
                     </strong>
                     <p className={`${styles.pTag}`}>
-                      M/S. Swarn Shanti CZ Gold Jewellery, Unit No-71, Apollo
-                      Industrial Estate, Off Mahakali Caves Road, Andheri (E),
+                      Unit No-71, Apollo
+                      Industrial Estate, Off Mahakali Caves Road, <br/> Andheri (E),
                       Mumbai - 400093.
                     </p>
                   </address>
@@ -193,9 +195,9 @@ const ContactUs = () => {
                     >
                       Email
                     </small>
-                    <a href="mailto:sales@swarnshantijewels.com">
-                      sales@swarnshantijewels.com
-                    </a>
+                    <Link href="mailto:admin@shantijewellers.com">
+                    admin@shantijewellers.co
+                    </Link>
                   </div>
 
                   <div className={`${styles.pTag} mb-3 animateThis slideRight`}>
@@ -205,7 +207,7 @@ const ContactUs = () => {
                     >
                       Contact No.
                     </small>
-                    <a href="tel:+919820987528">+91 98209 87528</a>
+                    <Link href="tel:+919820987528">+91 98209 87528</Link>
                   </div>
 
                   <div
