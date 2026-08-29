@@ -26,7 +26,7 @@ const SignatureCollection = () => {
           </div>
 
           <div className={`${styles.collnContainer} mx-auto`} >
-            <div className="row g-5 mb-5">
+            <div className="row g-5 mb-5 justify-content-center">
               <div className="col-md col-sm-6 animateThis slideLeft in-view">
                 <div className={`${styles.collnBox}`}>
                   <Link href="/karat">

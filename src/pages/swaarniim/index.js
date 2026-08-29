@@ -15,6 +15,11 @@ import collectionsImages10 from '@/assets/images/swaarniim/10.jpg'
 import collectionsImages11 from '@/assets/images/swaarniim/11.jpg'
 import collectionsImages12 from '@/assets/images/swaarniim/12.jpg'
 import collectionsImages13 from '@/assets/images/swaarniim/13.jpg'
+import collectionsImages14 from '@/assets/images/swaarniim/14.jpg'
+import collectionsImages15 from '@/assets/images/swaarniim/15.jpg'
+import collectionsImages16 from '@/assets/images/swaarniim/16.jpg'
+import collectionsImages17 from '@/assets/images/swaarniim/17.jpg'
+import collectionsImages18 from '@/assets/images/swaarniim/18.jpg'
 import logo from '@/assets/images/swaarniim/logo.png'
 
 const SwaarniimCollections = () => {
@@ -38,6 +43,11 @@ const SwaarniimCollections = () => {
           collectionsImages11,
           collectionsImages12,
           collectionsImages13,
+          collectionsImages14,
+          collectionsImages15,
+          collectionsImages16,
+          collectionsImages17,
+          collectionsImages18,
         ]}
         /> 
     </Layout>
