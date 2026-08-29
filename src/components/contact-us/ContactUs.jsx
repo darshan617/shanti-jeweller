@@ -16,7 +16,39 @@ const ContactUs = () => {
     mobile: "",
     message: "",
   });
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    message: "",
+  });
+
+  console.log(errors);
   const [loading, setLoading] = useState(false);
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!formData.name?.trim()) {
+      newErrors.name = "Name is required";
+    }
+
+    if (!formData.email?.trim()) {
+      newErrors.email = "Email is required";
+    }
+
+    if (!formData.mobile?.trim()) {
+      newErrors.mobile = "Mobile is required";
+    }
+
+    if (!formData.message?.trim()) {
+      newErrors.message = "Message is required";
+    }
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,9 +56,14 @@ const ContactUs = () => {
       ...prev,
       [name]: value,
     }));
+    setErrors((prev) => ({
+      ...prev,
+      [name]: "",
+    }));
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validateForm()) return;
     setLoading(true);
     const response = await fetch("/api/contact", {
       method: "POST",
@@ -134,18 +171,22 @@ const ContactUs = () => {
   return (
     <>
       <section className={`${styles.inBanner}`}>
-        <Image src={banner}
-         alt="banner" 
-        //  height={}
-        //  width={1000}
-         className={`${styles.inBanImg}`} />
+        <Image
+          src={banner}
+          alt="banner"
+          //  height={}
+          //  width={1000}
+          className={`${styles.inBanImg}`}
+        />
       </section>
 
       <section className={`${styles.aboutPage} sitePadding rounded-top-5`}>
         <div className="container-fluid pb-5">
           <div className="d-flex flex-wrap justify-content-center gap-5 position-relative z-1 mb-5">
             <div className="col-lg-9 text-center">
-              <div className={`${styles.pageTitle} text-center mx-auto bg-white`}>
+              <div
+                className={`${styles.pageTitle} text-center mx-auto bg-white`}
+              >
                 <div className="h-100 pt-4 d-flex flex-column align-items-center justify-content-center">
                   <div className="titleLotus mb-3 animateThis fadeGrow"></div>
                   <h2 className="sectSubTitle text-uppercase animateThis fadeIn">
@@ -182,9 +223,8 @@ const ContactUs = () => {
                       Shanti Jewellers
                     </strong>
                     <p className={`${styles.pTag}`}>
-                      Unit No-71, Apollo
-                      Industrial Estate, Off Mahakali Caves Road, <br/> Andheri (E),
-                      Mumbai - 400093.
+                      Unit No-71, Apollo Industrial Estate, Off Mahakali Caves
+                      Road, <br /> Andheri (E), Mumbai - 400093.
                     </p>
                   </address>
 
@@ -196,7 +236,7 @@ const ContactUs = () => {
                       Email
                     </small>
                     <Link href="mailto:admin@shantijewellers.com">
-                    admin@shantijewellers.co
+                      admin@shantijewellers.co
                     </Link>
                   </div>
 
@@ -237,9 +277,9 @@ const ContactUs = () => {
                           value={formData.name}
                           onChange={handleChange}
                         />
-                        <span className={styles.errorLabel}>
-                          This field is required
-                        </span>
+                        {errors?.name && (
+                          <p className={`${styles.errorLabel} text-danger`}>{errors.name}</p>
+                        )}
                       </div>
                       <div className="col-12">
                         <label className="form-label">Email *</label>
@@ -250,9 +290,9 @@ const ContactUs = () => {
                           value={formData.email}
                           onChange={handleChange}
                         />
-                        <span className={styles.errorLabel}>
-                          This field is required
-                        </span>
+                        {errors?.email && (
+                          <p className={`${styles.errorLabel} text-danger`}>{errors.email}</p>
+                        )}
                       </div>
                       <div className="col-12">
                         <label className="form-label">Mobile No.*</label>
@@ -263,9 +303,9 @@ const ContactUs = () => {
                           value={formData.mobile}
                           onChange={handleChange}
                         />
-                        <span className={styles.errorLabel}>
-                          This field is required
-                        </span>
+                        {errors?.mobile && (
+                          <p className={`${styles.errorLabel} text-danger`}>{errors.mobile}</p>
+                        )}
                       </div>
                       <div className="col-12">
                         <label className="form-label">Message</label>
@@ -276,15 +316,16 @@ const ContactUs = () => {
                           value={formData.message}
                           onChange={handleChange}
                         />
-                        <span className={styles.errorLabel}>
-                          This field is required
-                        </span>
+                        {errors?.message && (
+                          <p className={`${styles.errorLabel} text-danger`}>{errors.message}</p>
+                        )}
                       </div>
                       <div className="col-12 pt-3 text-center">
                         <button
                           type="button"
                           className="ctaBtn"
                           onClick={handleSubmit}
+                          disabled={loading}
                         >
                           {loading ? "Sending..." : "Send Message"}
                         </button>

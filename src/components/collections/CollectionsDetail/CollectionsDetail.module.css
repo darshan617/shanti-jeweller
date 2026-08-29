@@ -35,7 +35,7 @@
 }
 
 :global(.collectionList) > div:nth-child(odd) {
-  margin-bottom: 25%;
+  /* margin-bottom: 25%; */
 }
 
 :global(.collectionList) > div:nth-child(even) {
