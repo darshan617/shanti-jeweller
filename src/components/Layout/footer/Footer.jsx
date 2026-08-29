@@ -125,7 +125,7 @@ export default function Footer() {
                 </h5>
                 <ul className={`hstack gap-3 ${styles.socialIcons}`}>
                   <li>
-                    <Link href="" title="Facebook">
+                    <Link href="https://www.facebook.com/people/Shanti-Jewellers-Pvt-ltd/61591079441501/" title="Facebook" target="_blank"  z>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -138,7 +138,7 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="" title="Instagram">
+                    <Link href="https://www.instagram.com/shantijewellers_ltd?igsi=NXh2MHZ6eHcxYWlx" title="Instagram" target="_blank">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"

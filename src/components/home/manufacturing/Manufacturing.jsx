@@ -58,7 +58,7 @@ const Manufacturing = () => {
             </h3>
           </div>
 
-          <div className="row align-items-center justify-content-center pt-5 g-md-0 g-3">
+          <div className="row align-items-center justify-content-center g-md-0 g-3">
             <div
               className={`${styles.valueStone} col-lg col-7 order-lg-2 text-center animateThis slideBottom in-view`}
             >

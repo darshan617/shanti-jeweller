@@ -96,7 +96,6 @@
 .formFormat .errorLabel {
   color: #ff0000;
   font-size: 0.7rem;
-  display: none;
 }
 
 .formFormat :global(.error) .errorLabel {

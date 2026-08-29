@@ -137,12 +137,12 @@ const Banner = () => {
         >
           <source
             src="/videos/hero_mob.mp4"
-            // media="(max-width: 991.98px)"
+            media="(max-width: 991.98px)"
             type="video/mp4"
           />
           <source
-            src="/videos/hero.mp4"
-            // media="(min-width: 992px)"
+            src="/videos/hero_desktop.mp4"
+            media="(min-width: 992px)"
             type="video/mp4"
           />
           Your browser does not support the video tag.
