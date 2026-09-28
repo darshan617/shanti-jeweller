@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import ring from "@/assets/images/ring.png";
+import ring from "@/assets/images/ring_2.png";
 import jewellryDiamond from "@/assets/images/jewellry_diamond.jpg";
 import jewellryCZ from "@/assets/images/jewellry_CZ.jpg";
 import jewellryGold from "@/assets/images/jewellry_gold.jpg";
@@ -37,10 +37,7 @@ const Celebrate = () => {
           </div>
         </div>
         <div className={`${styles.stoneBox} py-5 py-lg-0`}>
-          <Image
-            src={ring}
-            className={`${styles.goldStone_1} goldStone_1`}
-          />
+          <Image src={ring} className={`${styles.goldStone_1} goldStone_1`} />
           <div className={`${styles.aboutYear} aboutYear titleFont`}>
             Since 1999
           </div>
@@ -51,24 +48,28 @@ const Celebrate = () => {
         <div className="container-fluid">
           <div className="row g-xl-5 g-md-4 g-3 justify-content-center">
             <div className="col-xxl-3 col-lg-4 col-sm-6 col-12">
-              <div className={`${styles.jewellryItem} ${styles.jiVert} d-flex align-items-end`}>
+              <div
+                className={`${styles.jewellryItem} ${styles.jiVert} d-flex align-items-end`}
+              >
                 <Image
-                  src={jewellryDiamond}
+                  src={jewellryCZ}
                   className={`${styles.jwImg} animateThis curtainLeft`}
-                  alt="jewellryDiamond"
+                  alt="jewellryCZ"
                 />
                 <div className={`${styles.jwTxt} animateThis slideRight`}>
                   <h2 className={`${styles.jwHead} titleFont`}>
-                    Diamond <br /> Jewelry{" "}
+                    CZ <br /> Jewelry
                   </h2>
-                  <Link href="/karat" className="ctaBtn ghost">
+                  <Link href="/svara" className="ctaBtn ghost">
                     Explore More
                   </Link>
                 </div>
               </div>
             </div>
             <div className="col-xxl-3 col-lg-4 col-sm-6 col-12">
-              <div className={`${styles.jewellryItem} ${styles.jiVert} d-flex align-items-end`}>
+              <div
+                className={`${styles.jewellryItem} ${styles.jiVert} d-flex align-items-end`}
+              >
                 <Image
                   src={jewellryGold}
                   className={`${styles.jwImg} animateThis curtainLeft`}
@@ -85,17 +86,19 @@ const Celebrate = () => {
               </div>
             </div>
             <div className="col-xxl-3 col-lg-4 col-sm-6 col-12">
-              <div className={`${styles.jewellryItem} ${styles.jiVert} d-flex align-items-end`}>
+              <div
+                className={`${styles.jewellryItem} ${styles.jiVert} d-flex align-items-end`}
+              >
                 <Image
-                  src={jewellryCZ}
+                  src={jewellryDiamond}
                   className={`${styles.jwImg} animateThis curtainLeft`}
-                  alt="jewellryCZ"
+                  alt="jewellryDiamond"
                 />
                 <div className={`${styles.jwTxt} animateThis slideRight`}>
                   <h2 className={`${styles.jwHead} titleFont`}>
-                    CZ <br /> Jewelry
+                    Diamond <br /> Jewelry{" "}
                   </h2>
-                  <Link href="/svara" className="ctaBtn ghost">
+                  <Link href="/karat" className="ctaBtn ghost">
                     Explore More
                   </Link>
                 </div>
@@ -178,6 +181,44 @@ const Celebrate = () => {
                     <div className="col-auto">
                       <div className={`${styles.teamImgBox}`}>
                         <Image
+                          src={mukeshJain}
+                          alt="mukeshJain"
+                          className={`${styles.teamImg}`}
+                        />
+                      </div>
+                    </div>
+                    <div className="col-auto teamTxt py-3">
+                      <h4 className={`${styles.teamName} mb-0`}>Mukesh Jain</h4>
+                      <div
+                        className={`${styles.teamDesg} titleFont mb-3 mx-auto w-75`}
+                      >
+                        Director - Finance &amp; Strategic Planning
+                      </div>
+                    </div>
+                    <div className={`${styles.teamInfo} col px-4`}>
+                      <p className={`${styles.pTag}`}>
+                        A strategic mind behind Shanti's growth, Mukesh Jain
+                        steers the company's financial direction and long-term
+                        vision. His measured approach to planning and progress
+                        continues to strengthen the business for what lies
+                        ahead.
+                      </p>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <div
+                  className="col animateThis slideTop"
+                  style={{ transitionDelay: ".5s" }}
+                >
+                  <div
+                    className={`${styles.teamItem} d-flex flex-column pb-5`}
+                    style={{ "--teamBgColor": "#e8c2b4" }}
+                  >
+                    <div className="col-auto">
+                      <div className={`${styles.teamImgBox}`}>
+                        <Image
                           src={premJain}
                           alt="premJain"
                           className={`${styles.teamImg}`}
@@ -201,16 +242,17 @@ const Celebrate = () => {
                         pulse of the jewellery industry.
                       </p>
                     </div>
+                    
                   </div>
                 </div>
 
                 <div
                   className="col animateThis slideTop"
-                  style={{ transitionDelay: ".5s" }}
+                  style={{ transitionDelay: ".7s" }}
                 >
                   <div
                     className={`${styles.teamItem} d-flex flex-column pb-5`}
-                    style={{ "--teamBgColor": "#e8c2b4" }}
+                    style={{ "--teamBgColor": "#c8a999" }}
                   >
                     <div className="col-auto">
                       <div className={`${styles.teamImgBox}`}>
@@ -236,43 +278,6 @@ const Celebrate = () => {
                         Her meticulous oversight brings clarity and consistency
                         to the operations that keep the business moving
                         seamlessly.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  className="col animateThis slideTop"
-                  style={{ transitionDelay: ".7s" }}
-                >
-                  <div
-                    className={`${styles.teamItem} d-flex flex-column pb-5`}
-                    style={{ "--teamBgColor": "#c8a999" }}
-                  >
-                    <div className="col-auto">
-                      <div className={`${styles.teamImgBox}`}>
-                        <Image
-                          src={mukeshJain}
-                          alt="mukeshJain"
-                          className={`${styles.teamImg}`}
-                        />
-                      </div>
-                    </div>
-                    <div className="col-auto teamTxt py-3">
-                      <h4 className={`${styles.teamName} mb-0`}>Mukesh Jain</h4>
-                      <div
-                        className={`${styles.teamDesg} titleFont mb-3 mx-auto w-75`}
-                      >
-                        Director - Finance &amp; Strategic Planning
-                      </div>
-                    </div>
-                    <div className={`${styles.teamInfo} col px-4`}>
-                      <p className={`${styles.pTag}`}>
-                        A strategic mind behind Shanti's growth, Mukesh Jain
-                        steers the company's financial direction and long-term
-                        vision. His measured approach to planning and progress
-                        continues to strengthen the business for what lies
-                        ahead.
                       </p>
                     </div>
                   </div>
