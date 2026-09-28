@@ -34,7 +34,7 @@ const SvaraCollections = () => {
           collectionsImages6,
           collectionsImages7,
           collectionsImages8,
-          collectionsImages9,
+          // collectionsImages9,
           collectionsImages10,
           collectionsImages11,
           collectionsImages12,
