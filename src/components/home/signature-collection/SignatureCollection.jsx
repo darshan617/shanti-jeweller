@@ -27,6 +27,13 @@ const SignatureCollection = () => {
 
           <div className={`${styles.collnContainer} mx-auto`} >
             <div className="row g-5 mb-5 justify-content-center">
+            <div className="col-md col-sm-6 animateThis slideRight in-view">
+                <div className={`${styles.collnBox}`}>
+                  <Link href="/svara">
+                    <Image src={collnSvara} alt="collnSvara" />
+                  </Link>
+                </div>
+              </div>
               <div className="col-md col-sm-6 animateThis slideLeft in-view">
                 <div className={`${styles.collnBox}`}>
                   <Link href="/karat">
@@ -42,13 +49,7 @@ const SignatureCollection = () => {
                 </div>
               </div>
               {/* <div className="col-md col-sm-12 d-flex flex-md-column flex-sm-row flex-column gap-4 order-md-2"> */}
-              <div className="col-md col-sm-6 animateThis slideRight in-view">
-                <div className={`${styles.collnBox}`}>
-                  <Link href="/svara">
-                    <Image src={collnSvara} alt="collnSvara" />
-                  </Link>
-                </div>
-              </div>
+              
               {/* <div className="col animateThis fadeShrink">
                 <div className={`${styles.collnBox}`}>
                   <Link href="/raahat">
