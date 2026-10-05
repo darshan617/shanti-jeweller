@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import banner from "@/assets/images/contactBanner.jpg";
@@ -8,7 +8,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const ContactUs = () => {
-  const mapRef = useRef(null);
   const { showToast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -114,57 +113,9 @@ const ContactUs = () => {
       });
     }
 
-    let map;
-    let cancelled = false;
-    let invalidateTimer;
-
-    const initMap = async () => {
-      const L = (await import("leaflet")).default;
-      await import("leaflet/dist/leaflet.css");
-
-      if (cancelled || !mapRef.current) return;
-
-      map = L.map(mapRef.current).setView(
-        [19.118959851795875, 72.85936016138986],
-        12,
-      );
-
-      L.tileLayer(
-        "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
-        {
-          maxZoom: 19,
-          attribution: "&copy; OpenStreetMap",
-        },
-      ).addTo(map);
-
-      const myIcon = L.icon({
-        iconUrl: "/images/mapMarker.png",
-        iconSize: [40, 50],
-        popupAnchor: [-3, -10],
-      });
-
-      L.marker([19.118959851795875, 72.85936016138986], { icon: myIcon })
-        .addTo(map)
-        .bindPopup(
-          '<span className="d-block text-center" style="font-size:10px">We are here</span><strong>Shanti Jewellers</strong> <a href="https://www.google.com/maps/dir/Current+Location/Shanti+Jewellers+Pvt+Limited,+Unit+No-+71,+Apollo+Industrial+Estate,+Off+Mahakali+Caves+Rd,+Andheri+(E,+Mumbai,+Maharashtra+400093/@19.1460563,72.8283077,8592m/data=!3m2!1e3!4b1!4m18!1m8!3m7!1s0x3be7c83100bff59b:0x15f51dfd1d289cee!2sShanti+Jewellers+Pvt+Limited!8m2!3d19.1149315!4d72.8601278!15sCgxzd2FybiBzaGFudGmSARRqZXdlbHJ5X21hbnVmYWN0dXJlcuABAA!16s%2Fg%2F11fnpb6ybc!4m8!1m1!4e1!1m5!1m1!1s0x3be7c83100bff59b:0x15f51dfd1d289cee!2m2!1d72.8601278!2d19.1149315?entry=ttu&g_ep=EgoyMDI2MDcxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="d-block text-center mt-1" style="font-size:11px;color:#6d2a46">Get Directions</a>',
-        );
-
-      invalidateTimer = setTimeout(() => {
-        if (!cancelled && map) map.invalidateSize();
-      }, 100);
-    };
-
-    initMap();
-
     return () => {
-      cancelled = true;
-      clearTimeout(invalidateTimer);
       if (tl) tl.kill();
       if (split) split.revert();
-      if (map) {
-        map.remove();
-        map = null;
-      }
     };
   }, []);
 
@@ -253,10 +204,14 @@ const ContactUs = () => {
                   <div
                     className={`${styles.mapWrapper} mt-4 rounded-1 w-100 position-relative overflow-hidden`}
                   >
-                    <div
-                      ref={mapRef}
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9355.864377354963!2d72.85060059357912!3d19.1149315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c82e3bfe78b3%3A0xcb26d534782029d2!2sApollo%20Industrial%20Estate!5e1!3m2!1sen!2sin!4v1790686154684!5m2!1sen!2sin"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="strict-origin-when-cross-origin"
                       className="w-100 h-100 position-absolute animateThis fadeShrink"
-                    />
+                    ></iframe>
                   </div>
                 </div>
 
