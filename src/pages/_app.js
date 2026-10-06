@@ -20,6 +20,23 @@ export default function App({ Component, pageProps }) {
     return cleanup;
   }, [router.asPath]);
 
+  useEffect(() => {
+    const handleRouteChange = () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant",
+      });
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router]);
+
+
   return (
     <ToastProvider>
       <Component {...pageProps} />
@@ -35,6 +52,8 @@ const initAos = async () => {
     once: true,
   });
 };
+
+
 
 function initSiteAnimations() {
   if (typeof window === "undefined") return () => {};
