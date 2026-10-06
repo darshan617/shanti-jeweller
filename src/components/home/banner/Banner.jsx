@@ -132,16 +132,16 @@ const Banner = () => {
           muted
           loop
           playsInline
-          poster="/videos/hero_mob.jpg"
+          poster="/videos/shanti_hero_desktop.jpg"
           className={styles.heroBanImg}
         >
           <source
-            src="/videos/hero_mob.mp4"
+            src="/videos/Shanti_Mobile_Video.mp4"
             media="(max-width: 991.98px)"
             type="video/mp4"
           />
           <source
-            src="/videos/hero_desktop.mp4"
+            src="/videos/Shanti_Desktop_Video.mp4"
             media="(min-width: 992px)"
             type="video/mp4"
           />
